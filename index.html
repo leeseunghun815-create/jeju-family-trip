@@ -137,6 +137,11 @@
   .fl .tm{font-weight:800;font-size:22px;letter-spacing:-.5px;line-height:1.2}
   .fl .tm small{font-weight:600;color:var(--sub);font-size:15px}
   .fl .al{justify-self:end}
+  .paylist{border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:0 0 12px}
+  .pay{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--sand);font-size:14px}
+  .pay:last-child{border-bottom:0}.pay small{display:block;color:var(--sub);font-size:12px;margin-top:2px;word-break:keep-all}
+  .pay>span{font-size:12px;color:var(--sub);white-space:nowrap}.pay>b{white-space:nowrap}
+  .pay.tot{background:#fff}.pay.tot b{color:var(--sea)}
   .bx{border:1px solid var(--line);border-radius:16px;background:var(--sand);margin:0 0 10px;overflow:hidden}
   .bxh{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#fff;border-bottom:1px solid var(--line)}
   .bxh b{font-size:15px}.bxh i{font-style:normal;font-size:12px;font-weight:800;padding:3px 9px;border-radius:9px}
@@ -350,7 +355,7 @@
 </div>
 
 <nav class="tabs" id="tabs">
-  <a href="#book">예약 현황</a><a href="#ask">챙길 것</a><a href="#wish">기다리는 것</a><a href="#when">누가 언제</a><a href="#flight">비행기</a><a href="#stay">숙소</a><a href="#cost">비용</a><a href="#map">위치</a><a href="#apx1">비행기 바꾸기</a><a href="#apx2">렌터카</a>
+  <a href="#book">예약 현황</a><a href="#ask">챙길 것</a><a href="#wish">기다리는 것</a><a href="#when">누가 언제</a><a href="#flight">비행기</a><a href="#stay">숙소</a><a href="#cost">비용</a><a href="#map">위치</a><a href="#apx1">비행기 바꾸기</a><a href="#apx2">렌터카</a><a href="#apx3">결제 내역</a>
 </nav>
 
 <!-- 챙길 것 -->
@@ -402,8 +407,7 @@
   <div class="bx"><div class="bxh"><b>🏠 11. 27.~29. 애월 바다 보이는 집</b><i class="ok">완료</i></div><ul><li><span>숙소</span><b>에어비앤비 · 오션뷰 3층 단독주택 한 채 (방 4 · 퀸 침대 4 · 욕실 3)</b></li><li><span>주소</span><b>제주시 애월읍 가문동상4길 43-1</b></li><li><span>체크인 · 아웃</span><b>27일(금) 오후 4시 이후 · 29일(일) 오전 11시 전</b></li><li><span>인원</span><b>어른 6 · 아이 2 (27일 밤 4명 먼저, 28일부터 8명)</b></li><li><span>결제</span><b>508,860원 (2박 565,400 − 쿠폰 56,540) · 청소비 35,000 포함</b></li><li><span>따로 내는 것</span><b>전기·가스·수도 쓴 만큼 (11월 하루 한 층 약 12,000원)</b></li><li><span>호스트</span><b>Evelyn 님 · 청소 A코스로 답장함</b></li><li><span>상태</span><b>예약 확정 · 결제 완료</b></li></ul><p class="bxn">호스트 안내: 생수 없음(직접 준비) · 휴지는 기본량 · 조리도구는 펜션 수준 · 입실 때 집 온도와 벌레는 환불 사유가 아님 · 바베큐 후에는 깨끗이 정리.</p></div>
   <div class="bx"><div class="bxh"><b>🏨 11. 29.~12. 1. 신라스테이 플러스 이호테우</b><i class="ok">완료</i></div><ul><li><span>객실</span><b>[2인 조식패키지] 그랜드 패밀리더블 가든뷰 · 45㎡ · 더블 침대 2</b></li><li><span>투숙객</span><b>이소은 · 박순랑 · 박시우(8) · 박지우(7) · 어른 2 아동 2</b></li><li><span>예약자</span><b>이승훈 (트립비토즈 비회원 예약)</b></li><li><span>체크인 · 아웃</span><b>29일(일) 오후 3시 이후 · 1일(화) 오전 11시 전 (9시쯤 나갈 예정)</b></li><li><span>결제</span><b>886,800원 (세금·봉사료 포함) · 트립비토즈</b></li><li><span>조식</span><b>어른 2명 포함 · 07:00~10:00 1층 카페 · 아이 1인 20,000원 현장 결제</b></li><li><span>취소</span><b>11. 26.(목) 0시 전 무료 · 이후 443,400원 · 11. 28.(토) 0시 이후 전액</b></li><li><span>주소</span><b>제주시 연대마을길 76 · 무료 주차</b></li><li><span>상태</span><b>예약 완료 · 결제 완료</b></li></ul><p class="bxn">최대 4명, 침대·침구 추가 불가 · 야외 온수 수영장 09:00~22:00 무료 (문신은 가려야 함) · 피트니스는 16세 이상 · 코인 세탁실 24시간.</p></div>
   <div class="bx"><div class="bxh"><b>🚗 렌터카 그랜저 2대</b><i class="wait">예약 전</i></div><ul><li><span>1호차</span><b>이승훈 · 11. 27. 21:30 ~ 11. 29. 20:30 · 102,600원~ (16:00 반납 기준 조회값)</b></li><li><span>2호차</span><b>이소은 · 11. 28. 18:00 ~ 12. 1. 09:30 · 153,100원~ · 부스터 시트 2개</b></li><li><span>상태</span><b>아직 예약 전 (제주패스)</b></li></ul></div>
-  <div class="cost"><div class="row tot"><span>결제한 금액 합계</span><b class="num">2,817,700원</b></div></div>
-  <p class="fine">비행기 1,422,440원 + 애월 집 508,860원 + 신라스테이 886,800원 = 2,817,700원. 렌터카(약 26만 원), 애월 집 공과금(약 7만 원), 아이 조식(약 8만 원), 기름값·식비·입장료는 아직 들어 있지 않습니다.</p>
+  <p class="hint">결제 금액과 취소 규정은 <a href="#apx3" style="color:var(--sea2);font-weight:700">부록 3 결제 내역</a>에 모았습니다</p>
   <div class="div" aria-hidden="true"></div>
 </section>
 
@@ -615,6 +619,32 @@
     <div><div class="eyebrow2">SEE YOU IN JEJU</div><b class="serif">제주에서 만나요</b>
     <span>귤 한 봉지 들고, 애월 우리 숙소에서. 여덟 식구가 다 모이는 11월 28일 저녁을 기다립니다.</span></div>
   </div>
+</section>
+
+<!-- 부록 3 -->
+<section id="apx3">
+  <div class="sec"><span class="no">부록 3</span><h2>결제 내역</h2></div>
+  <p class="hint">2026. 11. 3. 결제 · 세금·수수료 포함 · 결제 완료 화면과 확인 메일로 대조</p>
+  <h3>결제한 것</h3>
+  <div class="paylist">
+    <div class="pay"><div><b>비행기 11. 27. 대구→제주</b><small>트리니티 TW813 · 할인석 · 어른 4</small></div><span>NOL</span><b class="num">373,040원</b></div>
+    <div class="pay"><div><b>비행기 11. 28. 대구→제주</b><small>아시아나 OZ8127 · 할인석 · 어른 2 소아 2</small></div><span>NOL</span><b class="num">345,200원</b></div>
+    <div class="pay"><div><b>비행기 11. 29. 제주→대구</b><small>트리니티 TW814 · 일반석 · 어른 4</small></div><span>NOL</span><b class="num">481,200원</b></div>
+    <div class="pay"><div><b>비행기 12. 1. 제주→대구</b><small>진에어 LJ7584 · 할인석 · 어른 2 소아 2</small></div><span>NOL</span><b class="num">223,000원</b></div>
+    <div class="pay"><div><b>애월 바다 보이는 집 2박</b><small>11. 27.~29. · 565,400 − 쿠폰 56,540 · 청소비 포함</small></div><span>에어비앤비</span><b class="num">508,860원</b></div>
+    <div class="pay"><div><b>신라스테이 플러스 이호테우 2박</b><small>11. 29.~12. 1. · 그랜드 패밀리더블 · 어른 조식 포함</small></div><span>트립비토즈</span><b class="num">886,800원</b></div>
+    <div class="pay tot"><div><b>결제 합계</b><small>비행기 1,422,440 + 숙소 1,395,660</small></div><span></span><b class="num">2,817,700원</b></div>
+  </div>
+  <h3>앞으로 낼 것 (예상)</h3>
+  <div class="paylist">
+    <div class="pay"><div><b>렌터카 그랜저 2대</b><small>제주패스 · 완전자차 · 1호차 반납 20:30으로 다시 조회 필요</small></div><span>예약 전</span><b class="num">약 26만 원</b></div>
+    <div class="pay"><div><b>애월 집 전기·가스·수도</b><small>쓴 만큼 · 11월 하루 한 층 약 12,000원</small></div><span>퇴실 때</span><b class="num">약 7만 원</b></div>
+    <div class="pay"><div><b>신라스테이 아이 조식</b><small>1인 20,000원 × 2명 × 2일</small></div><span>현장</span><b class="num">약 8만 원</b></div>
+    <div class="pay tot"><div><b>여행 전체 예상</b><small>결제 합계 + 예상분 · 기름값·식비·입장료 빼고</small></div><span></span><b class="num">약 323만 원</b></div>
+  </div>
+  <h3>취소 · 환불 규정</h3>
+  <div class="bx"><ul><li><span>비행기</span><b>이름·날짜·시간 변경은 취소 후 다시 구매 · 발권 대행 수수료(편당 4,000원)는 결제 당일에만 환불 · 항공사 운임 규정에 따라 취소 수수료</b></li><li><span>애월 집</span><b>예약 후 24시간 안 취소는 전액 환불 · 그 뒤는 에어비앤비 환불 정책 적용</b></li><li><span>신라스테이</span><b>11. 26.(목) 0시 전 무료 취소 · 이후 443,400원 · 11. 28.(토) 0시 이후 886,800원 전액</b></li></ul></div>
+  <p class="fine">결제는 모두 이승훈 명의로 했습니다. 가족별 나눠 낼 금액은 따로 정해 알려 드립니다.</p>
 </section>
 
 <footer><svg aria-hidden="true"><use href="#hareubang"/></svg>제주 가족여행 안내 · 궁금한 점은 이승훈에게 연락 주세요</footer>
