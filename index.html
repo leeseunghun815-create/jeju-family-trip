@@ -137,6 +137,14 @@
   .fl .tm{font-weight:800;font-size:22px;letter-spacing:-.5px;line-height:1.2}
   .fl .tm small{font-weight:600;color:var(--sub);font-size:15px}
   .fl .al{justify-self:end}
+  .bx{border:1px solid var(--line);border-radius:16px;background:var(--sand);margin:0 0 10px;overflow:hidden}
+  .bxh{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#fff;border-bottom:1px solid var(--line)}
+  .bxh b{font-size:15px}.bxh i{font-style:normal;font-size:12px;font-weight:800;padding:3px 9px;border-radius:9px}
+  .bxh i.ok{background:#e3f3e6;color:#1f6b35}.bxh i.wait{background:#fde6d4;color:#b04a00}
+  .bx ul{list-style:none;margin:0;padding:6px 14px 8px}
+  .bx li{display:grid;grid-template-columns:84px 1fr;gap:8px;padding:5px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+  .bx li:last-child{border-bottom:0}.bx li span{color:var(--sub)}.bx li b{font-weight:600;word-break:keep-all}
+  .bxn{margin:0;padding:8px 14px 11px;font-size:12.5px;color:var(--sub);border-top:1px solid var(--line);word-break:keep-all}
   .fl .bk{grid-column:1 / -1;font-size:13px;font-weight:700;color:#1f6b35;background:#e3f3e6;border-radius:9px;padding:5px 9px}
   .fl .ppl{grid-column:1 / -1;font-size:14px;color:#444;border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
   .al{display:inline-block;font-size:12.5px;font-weight:700;padding:3px 10px;border-radius:10px;white-space:nowrap}
@@ -342,7 +350,7 @@
 </div>
 
 <nav class="tabs" id="tabs">
-  <a href="#ask">챙길 것</a><a href="#wish">기다리는 것</a><a href="#when">누가 언제</a><a href="#flight">비행기</a><a href="#stay">숙소</a><a href="#cost">비용</a><a href="#map">위치</a><a href="#apx1">비행기 바꾸기</a><a href="#apx2">렌터카</a>
+  <a href="#book">예약 현황</a><a href="#ask">챙길 것</a><a href="#wish">기다리는 것</a><a href="#when">누가 언제</a><a href="#flight">비행기</a><a href="#stay">숙소</a><a href="#cost">비용</a><a href="#map">위치</a><a href="#apx1">비행기 바꾸기</a><a href="#apx2">렌터카</a>
 </nav>
 
 <!-- 챙길 것 -->
@@ -380,6 +388,22 @@
 <path d="M150 20 L186 70 M158 16 L192 66" stroke="#c9a46a" stroke-width="3" stroke-linecap="round"/>
 <path d="M84 30 Q80 20 86 12 M100 28 Q96 18 102 8 M116 30 Q112 20 118 12" stroke="#ddd" stroke-width="2" fill="none" opacity=".5" stroke-linecap="round"/></svg></div><div class="wtx"><b>흑돼지 · 제철 방어</b><small>제주의 저녁</small><span>여덟 식구가 둘러앉아 굽는 흑돼지, 겨울이 제철인 방어회. 고기국수와 귤 디저트까지</span></div></div></div>
   <div class="together"><svg aria-hidden="true"><use href="#gyul"/></svg><span><b>일정은 함께 정해요.</b> 가 보고 싶은 곳이나 먹고 싶은 것이 있으면 개인 메시지에 같이 적어 주세요.</span></div>
+  <div class="div" aria-hidden="true"></div>
+</section>
+
+<!-- 예약 현황 -->
+<section id="book">
+  <div class="sec"><span class="no">00</span><h2>예약 현황</h2></div>
+  <p class="hint">2026. 11. 3. 기준 · 결제·확정 화면과 확인 메일로 대조 · 예약번호는 가족 톡방 문자로</p>
+  <div class="bx"><div class="bxh"><b>✈ 11. 27.(금) 대구 → 제주</b><i class="ok">완료</i></div><ul><li><span>항공편</span><b>트리니티항공 TW813 · 20:05 → 21:10</b></li><li><span>탑승객</span><b>이미순 · 이미경 · 김태연 · 이승훈 (어른 4)</b></li><li><span>좌석 · 짐</span><b>할인석 · 부치는 짐 1인 15kg</b></li><li><span>결제</span><b>373,040원 (항공 369,040 + 발권 대행 수수료 4,000) · NOL</b></li><li><span>상태</span><b>발권 완료</b></li></ul></div>
+  <div class="bx"><div class="bxh"><b>✈ 11. 28.(토) 대구 → 제주</b><i class="ok">완료</i></div><ul><li><span>항공편</span><b>아시아나항공 OZ8127 · 16:10 → 17:15</b></li><li><span>탑승객</span><b>이소은 · 박순랑 (어른) · 박시우 · 박지우 (소아)</b></li><li><span>좌석 · 짐</span><b>할인석 · 부치는 짐 1인 20kg</b></li><li><span>결제</span><b>345,200원 · NOL</b></li><li><span>상태</span><b>발권 완료</b></li></ul></div>
+  <div class="bx"><div class="bxh"><b>✈ 11. 29.(일) 제주 → 대구</b><i class="ok">완료</i></div><ul><li><span>항공편</span><b>트리니티항공 TW814 · 21:55 → 23:00</b></li><li><span>탑승객</span><b>이미순 · 이미경 · 김태연 · 이승훈 (어른 4)</b></li><li><span>좌석 · 짐</span><b>일반석 · 부치는 짐 1인 20kg</b></li><li><span>결제</span><b>481,200원 (항공 477,200 + 수수료 4,000) · NOL</b></li><li><span>상태</span><b>발권 완료 · 처음 고른 제주항공 18:10은 매진</b></li></ul></div>
+  <div class="bx"><div class="bxh"><b>✈ 12. 1.(화) 제주 → 대구</b><i class="ok">완료</i></div><ul><li><span>항공편</span><b>진에어 LJ7584 · 10:50 → 11:55</b></li><li><span>탑승객</span><b>이소은 · 박순랑 (어른) · 박시우 · 박지우 (소아)</b></li><li><span>좌석 · 짐</span><b>할인석 · 부치는 짐 1인 15kg</b></li><li><span>결제</span><b>223,000원 (항공 219,000 + 수수료 4,000) · NOL</b></li><li><span>상태</span><b>발권 완료 · 4명 e-티켓 메일 받음</b></li></ul><p class="bxn">비행기 공통: 이름·날짜·시간을 바꾸려면 취소 후 다시 사야 하고, 발권 대행 수수료는 결제 당일에만 환불됩니다. 탑승 수속은 출발 30분 전에 마감합니다.</p></div>
+  <div class="bx"><div class="bxh"><b>🏠 11. 27.~29. 애월 바다 보이는 집</b><i class="ok">완료</i></div><ul><li><span>숙소</span><b>에어비앤비 · 오션뷰 3층 단독주택 한 채 (방 4 · 퀸 침대 4 · 욕실 3)</b></li><li><span>주소</span><b>제주시 애월읍 가문동상4길 43-1</b></li><li><span>체크인 · 아웃</span><b>27일(금) 오후 4시 이후 · 29일(일) 오전 11시 전</b></li><li><span>인원</span><b>어른 6 · 아이 2 (27일 밤 4명 먼저, 28일부터 8명)</b></li><li><span>결제</span><b>508,860원 (2박 565,400 − 쿠폰 56,540) · 청소비 35,000 포함</b></li><li><span>따로 내는 것</span><b>전기·가스·수도 쓴 만큼 (11월 하루 한 층 약 12,000원)</b></li><li><span>호스트</span><b>Evelyn 님 · 청소 A코스로 답장함</b></li><li><span>상태</span><b>예약 확정 · 결제 완료</b></li></ul><p class="bxn">호스트 안내: 생수 없음(직접 준비) · 휴지는 기본량 · 조리도구는 펜션 수준 · 입실 때 집 온도와 벌레는 환불 사유가 아님 · 바베큐 후에는 깨끗이 정리.</p></div>
+  <div class="bx"><div class="bxh"><b>🏨 11. 29.~12. 1. 신라스테이 플러스 이호테우</b><i class="ok">완료</i></div><ul><li><span>객실</span><b>[2인 조식패키지] 그랜드 패밀리더블 가든뷰 · 45㎡ · 더블 침대 2</b></li><li><span>투숙객</span><b>이소은 · 박순랑 · 박시우(8) · 박지우(7) · 어른 2 아동 2</b></li><li><span>예약자</span><b>이승훈 (트립비토즈 비회원 예약)</b></li><li><span>체크인 · 아웃</span><b>29일(일) 오후 3시 이후 · 1일(화) 오전 11시 전 (9시쯤 나갈 예정)</b></li><li><span>결제</span><b>886,800원 (세금·봉사료 포함) · 트립비토즈</b></li><li><span>조식</span><b>어른 2명 포함 · 07:00~10:00 1층 카페 · 아이 1인 20,000원 현장 결제</b></li><li><span>취소</span><b>11. 26.(목) 0시 전 무료 · 이후 443,400원 · 11. 28.(토) 0시 이후 전액</b></li><li><span>주소</span><b>제주시 연대마을길 76 · 무료 주차</b></li><li><span>상태</span><b>예약 완료 · 결제 완료</b></li></ul><p class="bxn">최대 4명, 침대·침구 추가 불가 · 야외 온수 수영장 09:00~22:00 무료 (문신은 가려야 함) · 피트니스는 16세 이상 · 코인 세탁실 24시간.</p></div>
+  <div class="bx"><div class="bxh"><b>🚗 렌터카 그랜저 2대</b><i class="wait">예약 전</i></div><ul><li><span>1호차</span><b>이승훈 · 11. 27. 21:30 ~ 11. 29. 20:30 · 102,600원~ (16:00 반납 기준 조회값)</b></li><li><span>2호차</span><b>이소은 · 11. 28. 18:00 ~ 12. 1. 09:30 · 153,100원~ · 부스터 시트 2개</b></li><li><span>상태</span><b>아직 예약 전 (제주패스)</b></li></ul></div>
+  <div class="cost"><div class="row tot"><span>결제한 금액 합계</span><b class="num">2,817,700원</b></div></div>
+  <p class="fine">비행기 1,422,440원 + 애월 집 508,860원 + 신라스테이 886,800원 = 2,817,700원. 렌터카(약 26만 원), 애월 집 공과금(약 7만 원), 아이 조식(약 8만 원), 기름값·식비·입장료는 아직 들어 있지 않습니다.</p>
   <div class="div" aria-hidden="true"></div>
 </section>
 
@@ -481,7 +505,7 @@
   <div class="note"><b>알아 두세요</b><span>사진으로 보면 바다는 집 앞 들판 너머로 보입니다. 흐리거나 안개 낀 날에는 잘 안 보일 수 있습니다. 침대가 4개라 이불을 더 받을 수 있는지 예약 때 호스트에게 묻겠습니다.</span></div>
 
   <h3>11. 29.~12. 1. · 신라스테이 플러스 이호테우</h3>
-  <p class="hint">이소은 · 박순랑 · 시우 · 지우 · 2박 · 어른 2인 조식 포함 · 제주시 이호테우 해변</p>
+  <p class="hint">예약 완료 · 이소은 · 박순랑 · 시우 · 지우 · 2박 · 어른 2인 조식 포함 · 제주시 이호테우 해변</p>
   <div class="gal">
     <figure><img src="img/shilla_01.jpg" alt="전경 · 이호테우 해변 앞" loading="lazy"><figcaption>전경 · 이호테우 해변 앞</figcaption></figure>
     <figure><img src="img/shilla_02.jpg" alt="야외 온수 수영장" loading="lazy"><figcaption>야외 온수 수영장</figcaption></figure>
@@ -498,7 +522,7 @@
   <p class="swipe">옆으로 밀어 사진 11장 보기 →</p>
   <div class="facts">
     <div><small>객실</small><b>그랜드 패밀리더블</b><span>가든뷰 · 45㎡ · 더블 침대 2</span></div>
-    <div><small>요금</small><b>2박 886,800원</b><span>어른 2인 조식 포함 · 트립비토즈 · 결제 대기</span></div>
+    <div><small>요금</small><b>2박 886,800원</b><span>어른 2인 조식 포함 · 트립비토즈 11. 3. 결제 완료</span></div>
     <div><small>체크인</small><b>오후 3시부터</b><span>29일 애월 집에서 차로 약 15분</span></div>
     <div><small>체크아웃</small><b>오전 11시</b><span>12. 1. 아침 9시쯤 나와 공항(약 18분)</span></div>
     <div><small>조식</small><b>07:00~10:00</b><span>1층 카페 뷔페 · 아이 1인 20,000원 현장 결제</span></div>
@@ -517,12 +541,12 @@
   <p class="hint">11. 1.~2. 조회</p>
   <div class="cost">
     <div class="row"><span><i style="background:var(--sea2)"></i>비행기 · 16좌석 · 결제</span><b class="num">1,422,440원</b></div>
-    <div class="row"><span><i style="background:var(--tang)"></i>숙소 · 4박</span><b class="num">약 147만</b></div>
+    <div class="row"><span><i style="background:var(--tang)"></i>숙소 · 4박</span><b class="num">1,467,660원</b></div>
     <div class="row"><span><i style="background:var(--basalt)"></i>렌터카 · 2대</span><b class="num">약 26만</b></div>
     <div class="row tot"><span>합계</span><b class="num">약 315만 원</b></div>
   </div>
   <div class="bar100"><i style="width:45.2%;background:var(--sea2)"></i><i style="width:46.7%;background:var(--tang)"></i><i style="width:8.1%;background:var(--basalt)"></i></div>
-  <p class="fine">숙소는 애월 집 27~29일 2박 에어비앤비 11. 3. 결제 508,860원(쿠폰 적용) + 전기·가스·수도 약 7만 원(호스트 안내 11월 하루 한 층 12,000원 × 3층) + 신라스테이 플러스 이호테우 29~1일 2박 그랜드 패밀리더블 어른 조식 포함 트립비토즈 886,800원(결제 대기) · 렌터카는 제주패스 11. 3. 조회 그랜저 GN7 완전자차 최저가 102,600원 + 153,100원 · 비행기는 11. 3. NOL에서 4편 모두 발권한 실제 결제액 1,422,440원(373,040 + 345,200 + 481,200 + 223,000) · 1호차는 반납이 20:30으로 늦어져 요금이 조금 오를 수 있습니다. 기름값·식비·입장료는 빠져 있습니다.</p>
+  <p class="fine">숙소는 애월 집 27~29일 2박 에어비앤비 11. 3. 결제 508,860원(쿠폰 적용) + 전기·가스·수도 약 7만 원(호스트 안내 11월 하루 한 층 12,000원 × 3층) + 신라스테이 플러스 이호테우 29~1일 2박 그랜드 패밀리더블 어른 조식 포함 트립비토즈 결제 886,800원 · 렌터카는 제주패스 11. 3. 조회 그랜저 GN7 완전자차 최저가 102,600원 + 153,100원 · 비행기는 11. 3. NOL에서 4편 모두 발권한 실제 결제액 1,422,440원(373,040 + 345,200 + 481,200 + 223,000) · 1호차는 반납이 20:30으로 늦어져 요금이 조금 오를 수 있습니다. 기름값·식비·입장료는 빠져 있습니다.</p>
   <div class="div" aria-hidden="true"></div>
 </section>
 
