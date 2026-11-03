@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0d4f5e">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex, nofollow">
+<title>제주 가족여행</title>
+<meta property="og:title" content="제주, 우리 가족 5박 6일">
+<meta property="og:description" content="2026. 11. 27.(금) ~ 12. 2.(수) · 애월 바다 보이는 집">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sea:#0d4f5e; --sea2:#14708a; --seaSoft:#e4f1f3;
+    --tang:#ef7d1a; --tangDeep:#b4540a; --tangSoft:#fdf0e3;
+    --basalt:#2a2d30; --ink:#22262a; --sub:#6b7278; --line:#e3e1dc;
+    --sand:#faf7f2; --paper:#fff; --bg:#efece6;
+  }
+  *{box-sizing:border-box;word-break:keep-all;overflow-wrap:break-word;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth;scroll-padding-top:56px;-webkit-text-size-adjust:100%}
+  html,body{margin:0}
+  body{background:var(--bg);color:var(--ink);font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;font-size:16px;line-height:1.6;letter-spacing:-.2px}
+  .wrap{max-width:520px;margin:0 auto;background:var(--paper);min-height:100vh;box-shadow:0 0 30px rgba(0,0,0,.08)}
+  .serif{font-family:'Noto Serif KR','Batang',serif}
+  .num{font-variant-numeric:tabular-nums}
+  a{color:inherit}
+
+  /* 표지 */
+  .cover{position:relative;height:min(78vh,560px);min-height:440px;color:#fff;overflow:hidden;background:var(--sea)}
+  .cover::before{content:"";position:absolute;inset:0;background:url('img/cover.jpg') 40% 55%/cover}
+  .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,46,56,.15) 0%,rgba(9,46,56,0) 30%,rgba(9,46,56,.45) 62%,rgba(9,46,56,.9) 100%)}
+  .cover .t{position:absolute;left:20px;right:20px;bottom:26px;z-index:2}
+  .eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:2.5px;padding:3px 11px;border:1px solid rgba(255,255,255,.75);border-radius:20px;margin-bottom:12px}
+  .tagline{font-size:15px;font-weight:700;margin:0 0 6px;text-shadow:0 1px 6px rgba(0,0,0,.4)}
+  .cover h1{font-family:'Noto Serif KR','Batang',serif;font-weight:800;font-size:38px;line-height:1.18;margin:0 0 10px;letter-spacing:-1px;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+  .cover h1 em{font-style:normal;color:#ffb46b}
+  .cover p{margin:0;font-size:15px;opacity:.95;text-shadow:0 2px 10px rgba(0,0,0,.4)}
+  .cover-art{position:absolute;right:4px;bottom:120px;z-index:1;width:104px;height:140px;opacity:.95}
+  .credit{position:absolute;right:10px;top:10px;z-index:2;font-size:10px;color:#fff;background:rgba(0,0,0,.28);padding:1px 8px;border-radius:8px}
+  .stats{display:grid;grid-template-columns:1fr 1fr;background:var(--sea);color:#fff}
+  .stats div{padding:12px 8px 13px;text-align:center;border-top:1px solid rgba(255,255,255,.12)}
+  .stats div:nth-child(odd){border-right:1px solid rgba(255,255,255,.12)}
+  .stats b{display:block;font-size:19px;font-weight:800;letter-spacing:-.5px}
+  .stats span{font-size:12px;opacity:.82;line-height:1.35;display:block}
+
+  /* 탭 */
+  .tabs{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;gap:6px;overflow-x:auto;padding:9px 14px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs a{flex:none;text-decoration:none;font-size:14px;font-weight:700;color:var(--sub);padding:6px 13px;border-radius:18px;background:var(--sand);border:1px solid var(--line)}
+  .tabs a.on{background:var(--sea);color:#fff;border-color:var(--sea)}
+
+  /* 섹션 */
+  section{padding:30px 18px 6px}
+  .sec{display:flex;align-items:baseline;gap:10px;margin:0 0 4px}
+  .sec .no{font-family:'Noto Serif KR',serif;font-weight:800;font-size:24px;color:var(--tang);line-height:1}
+  .sec h2{font-family:'Noto Serif KR',serif;font-weight:800;font-size:22px;margin:0;color:var(--sea);letter-spacing:-.5px;line-height:1.3}
+  .hint{font-size:13px;color:var(--sub);margin:0 0 14px}
+  h3{font-family:'Noto Serif KR',serif;font-size:18px;color:var(--sea);margin:26px 0 4px}
+  .fine{font-size:13.5px;color:var(--sub);margin:10px 0 0;line-height:1.6}
+  .div{height:8px;background:var(--bg);margin:30px -18px 0}
+
+  /* 부탁 */
+  .ask{background:var(--tangSoft);border-radius:18px;padding:18px 18px 16px;position:relative}
+  .due{display:inline-flex;align-items:center;gap:6px;background:var(--tang);color:#fff;font-weight:800;font-size:14px;padding:5px 13px;border-radius:20px;margin-bottom:10px}
+  .ask h2{font-family:'Noto Serif KR',serif;font-size:22px;color:var(--tangDeep);margin:0 0 6px}
+  .ask .gy{position:absolute;right:16px;top:14px;width:38px;height:38px}
+  .ask .lead{margin:0 0 14px;font-size:15.5px}
+  .ask .lead b{color:var(--tangDeep)}
+  .grp{font-size:12.5px;font-weight:800;color:var(--tangDeep);letter-spacing:1px;margin:12px 0 6px}
+  .items{list-style:none;margin:0;padding:0}
+  .items li{display:flex;gap:10px;align-items:flex-start;margin:0 0 8px;font-size:15.5px;line-height:1.5}
+  .items i{flex:none;font-style:normal;width:24px;height:24px;border-radius:50%;background:#fff;border:1.5px solid var(--tang);color:var(--tangDeep);font-size:12.5px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:0}
+  .items small{display:block;color:var(--sub);font-size:13.5px}
+  .warn{margin:12px 0 0;padding-top:12px;border-top:1px dashed #e6b98c;font-size:14px;color:#8a5a2b;line-height:1.55}
+
+  /* 챙길 것 */
+  .bring{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .bring div{border:1px solid var(--line);border-radius:14px;padding:13px 13px;background:var(--sand)}
+  .bring svg{width:30px;height:30px;display:block}
+  .bring b{display:block;font-size:15.5px;margin:7px 0 2px;color:var(--sea)}
+  .bring span{font-size:13.5px;color:var(--sub);line-height:1.45;display:block}
+
+  /* 기다리는 것 */
+  .wishhead{display:flex;gap:14px;align-items:center;background:linear-gradient(120deg,var(--seaSoft),var(--tangSoft));border-radius:18px;padding:16px 16px;margin-bottom:12px}
+  .whb{flex:none;width:44px;height:84px}
+  .eyebrow2{font-size:11px;font-weight:800;letter-spacing:2px;color:var(--tang)}
+  .wishhead h2{margin:2px 0 4px;font-size:21px;color:var(--sea);letter-spacing:-.5px;line-height:1.3}
+  .wishhead p{margin:0;font-size:14px;color:#3d4a50;line-height:1.55}
+  .wishes{display:grid;grid-template-columns:1fr;gap:12px}
+  .wish{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;display:grid;grid-template-columns:40% 1fr}
+  .wart svg{display:block;width:100%;height:100%;min-height:118px}
+  .wtx{padding:11px 13px 12px}
+  .wtx b{display:block;font-family:'Noto Serif KR',serif;font-size:17px;color:var(--sea);line-height:1.3}
+  .wtx small{display:block;font-size:12.5px;color:var(--tang);font-weight:700;margin:2px 0 4px}
+  .wtx span{font-size:14px;color:#444;line-height:1.5;display:block}
+  .together{display:flex;align-items:center;gap:12px;margin-top:12px;background:var(--tangSoft);border-radius:14px;padding:12px 15px;font-size:14.5px;line-height:1.5}
+  .together svg{flex:none;width:30px;height:30px}
+  .together b{color:var(--tangDeep)}
+
+  /* 누가 언제 */
+  .days{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin:0 0 12px}
+  .day{text-align:center;border-radius:12px;background:var(--sand);border:1px solid var(--line);padding:7px 0 8px}
+  .day .d{font-weight:800;font-size:17px;color:var(--sea);line-height:1.1}
+  .day .w{font-size:11.5px;color:var(--sub)}
+  .day.we .d,.day.we .w{color:var(--tang)}
+  .day .p{margin-top:5px;font-size:15px;font-weight:800;color:var(--ink)}
+  .day .p small{font-size:10.5px;font-weight:600;color:var(--sub)}
+  .day.full{background:var(--sea);border-color:var(--sea)}
+  .day.full .d,.day.full .w,.day.full .p,.day.full .p small{color:#fff}
+  .daycap{font-size:12.5px;color:var(--sub);margin:-6px 0 14px;text-align:right}
+  .who{border-radius:16px;border:1px solid var(--line);overflow:hidden;margin:0 0 10px}
+  .who .hd{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;color:#fff}
+  .who.g1 .hd{background:linear-gradient(90deg,var(--sea),var(--sea2))}
+  .who.g2 .hd{background:linear-gradient(90deg,#d96a0c,var(--tang))}
+  .who.car .hd{background:var(--basalt)}
+  .who .hd b{font-size:15.5px}
+  .who .hd span{font-size:12.5px;font-weight:700;background:rgba(255,255,255,.2);padding:2px 10px;border-radius:10px;white-space:nowrap}
+  .who .bd{padding:10px 14px 12px;background:#fff}
+  .who .nm{font-size:15.5px;font-weight:700;margin:0 0 6px}
+  .who .nm small{font-weight:500;color:var(--sub);font-size:13px}
+  .span{position:relative;display:grid;grid-template-columns:repeat(6,1fr);height:10px;border-radius:5px;background:#f0eee9;margin:4px 0 8px}
+  .span i{display:block;border-radius:5px}
+  .who.g1 .span i{background:var(--sea2)}.who.g2 .span i{background:var(--tang)}.who.car .span i{background:var(--basalt)}
+  .leg{display:flex;justify-content:space-between;gap:10px;font-size:13.5px}
+  .leg div{line-height:1.4}
+  .leg small{display:block;color:var(--sub);font-size:12px}
+  .leg div:last-child{text-align:right}
+
+  /* 비행기 */
+  .fl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:center;background:var(--sand);border:1px solid var(--line);border-radius:16px;padding:13px 15px;margin:0 0 9px}
+  .fl .dt{font-weight:800;color:var(--sea);font-size:15.5px}
+  .fl .rt{font-weight:700;font-size:15.5px;text-align:right}
+  .fl .rt i{font-style:normal;color:var(--tang);margin:0 4px}
+  .fl .tm{font-weight:800;font-size:22px;letter-spacing:-.5px;line-height:1.2}
+  .fl .tm small{font-weight:600;color:var(--sub);font-size:15px}
+  .fl .al{justify-self:end}
+  .fl .ppl{grid-column:1 / -1;font-size:14px;color:#444;border-top:1px dashed var(--line);padding-top:8px;margin-top:4px}
+  .al{display:inline-block;font-size:12.5px;font-weight:700;padding:3px 10px;border-radius:10px;white-space:nowrap}
+  .al.jj{background:#fde6d4;color:#b04a00}.al.oz{background:#e8e2f2;color:#5b3d8a}.al.ke{background:#dceef7;color:#135c84}.al.tw{background:#e3f3e6;color:#1f6b35}
+
+  .flow{border-radius:16px;overflow:hidden;margin:0 0 10px;border:1px solid var(--line)}
+  .flow .fh{color:#fff;padding:10px 14px;display:flex;justify-content:space-between;align-items:baseline}
+  .flow.f1 .fh{background:var(--sea)}.flow.f2 .fh{background:var(--tang)}
+  .flow .fh b{font-size:15.5px}.flow .fh span{font-size:13px;opacity:.92}
+  .steps{list-style:none;margin:0;padding:12px 14px 6px;background:var(--sand)}
+  .steps li{position:relative;display:grid;grid-template-columns:92px 1fr;gap:8px;padding:0 0 12px}
+  .steps li::before{content:"";position:absolute;left:5px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--tang)}
+  .steps li:not(:last-child)::after{content:"";position:absolute;left:9px;top:19px;bottom:-1px;width:1px;background:#e2c9ae}
+  .steps b{padding-left:22px;font-size:15px;white-space:nowrap}
+  .steps span{font-size:14.5px;color:#3d4a50}
+
+  /* 숙소 */
+  .hero{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3;background:url('img/ocean_07.jpg') center 42%/cover}
+  .seatag{position:absolute;right:12px;top:12px;background:var(--sea2);color:#fff;font-size:12.5px;font-weight:700;padding:4px 12px;border-radius:14px;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+  .hero .lab{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(255,255,255,.95);border-radius:12px;padding:10px 14px;text-decoration:none}
+  .hero .lab b{display:block;font-family:'Noto Serif KR',serif;font-size:17px;color:var(--sea)}
+  .hero .lab span{font-size:13px;color:var(--sub);line-height:1.45;display:block}
+  .gal{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;margin:10px -18px 0;padding:0 18px 4px;scroll-padding:0 18px;scrollbar-width:none}
+  .gal::-webkit-scrollbar{display:none}
+  .gal figure{flex:none;width:72%;margin:0;position:relative;scroll-snap-align:start}
+  .gal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;display:block}
+  .gal figcaption{position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,.55);color:#fff;font-size:12.5px;padding:2px 9px;border-radius:9px}
+  .swipe{font-size:12.5px;color:var(--sub);text-align:right;margin:4px 0 0}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0 0}
+  .facts div{border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+  .facts small{display:block;font-size:12px;color:var(--sub);font-weight:700;letter-spacing:.5px}
+  .facts b{display:block;font-size:15.5px;color:var(--ink);margin:1px 0}
+  .facts span{font-size:13px;color:var(--sub);line-height:1.45;display:block}
+  .abnb{display:flex;align-items:center;gap:12px;margin-top:12px;padding:13px 15px;border-radius:14px;background:#fff1f2;border:1px solid #f7c6cc;text-decoration:none;color:var(--ink)}
+  .abic{background:#ff385c;color:#fff;font-weight:800;font-size:12.5px;padding:5px 10px;border-radius:8px}
+  .abt{flex:1;min-width:0}.abt b{display:block;font-size:15.5px;color:#c4183c}.abt small{font-size:12px;color:var(--sub);display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .abgo{font-weight:800;color:#c4183c;font-size:15px;white-space:nowrap}
+  .note{margin-top:12px;background:var(--seaSoft);border-radius:14px;padding:12px 15px}
+  .note b{display:block;color:var(--sea);font-size:15px;margin-bottom:2px}.note span{font-size:14px;color:#3d4a50;line-height:1.55}
+
+  /* 비용 */
+  .cost{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+  .cost .row{display:flex;justify-content:space-between;align-items:center;padding:12px 15px;border-bottom:1px solid var(--line);font-size:15px}
+  .cost .row i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;vertical-align:middle}
+  .cost .row b{font-size:17px}
+  .cost .tot{background:var(--sea);color:#fff;border:0}
+  .cost .tot b{font-size:22px}
+  .bar100{display:flex;height:10px;border-radius:5px;overflow:hidden;margin:10px 0 0}
+  .bar100 i{display:block}
+
+  /* 지도 */
+  .map{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+  .map img{display:block;width:100%;height:auto}
+  .pin{position:absolute;display:flex;align-items:center;gap:4px;white-space:nowrap;transform:translate(-5px,-50%)}
+  .pin i{display:block;width:10px;height:10px;border-radius:50%;background:var(--sea);border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+  .pin span{background:rgba(255,255,255,.94);color:var(--ink);font-size:11px;font-weight:700;padding:1px 6px;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+  .pin.l{flex-direction:row-reverse;transform:translate(calc(-100% + 5px),-50%)}
+  .pin.me i{width:15px;height:15px;background:var(--sea2);border-width:3px;box-shadow:0 0 0 5px rgba(20,112,138,.3),0 2px 6px rgba(0,0,0,.4)}
+  .pin.me{transform:translate(calc(-100% + 8px),-50%)}
+  .pin.me span{background:var(--sea2);color:#fff;font-size:12px;padding:1px 8px}
+  .pin.ap i{background:#5b3d8a}
+  .pin.sm span{font-weight:600;font-size:10px}
+  .mroute{position:absolute;inset:0;width:100%;height:100%}
+  .rlabel{position:absolute;transform:translate(-50%,-50%);background:var(--sea2);color:#fff;font-weight:800;font-size:12px;padding:2px 9px;border-radius:11px;box-shadow:0 1px 4px rgba(0,0,0,.3)}
+  .osm{position:absolute;right:6px;bottom:4px;font-size:9.5px;color:#555;background:rgba(255,255,255,.85);padding:0 5px;border-radius:4px}
+  .tips{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}
+  .tips div{background:var(--seaSoft);border-radius:14px;padding:12px 15px}
+  .tips b{display:block;color:var(--sea);font-size:15px}
+  .tips span{font-size:14px;color:#3d4a50;line-height:1.55;display:block}
+  .tips a{color:var(--sea2);font-weight:700;text-decoration:none}
+
+  /* 부록 */
+  .apx-lead{margin:0 0 12px;font-size:14.5px;color:var(--sub);line-height:1.6}
+  .apx-lead .pk{color:var(--tang)}
+  details.seg{border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:0 0 10px;background:#fff}
+  details.seg summary{list-style:none;cursor:pointer;background:var(--sand);padding:12px 15px;display:grid;grid-template-columns:1fr auto;gap:2px 8px;align-items:center}
+  details.seg summary::-webkit-details-marker{display:none}
+  details.seg summary b{color:var(--sea);font-size:15.5px}
+  details.seg summary .rt{font-weight:800;font-size:15px}
+  details.seg summary .sw{grid-column:1 / -1;font-size:13px;color:var(--sub)}
+  details.seg summary .ch{grid-row:1 / span 2;grid-column:2;color:var(--tang);font-weight:800;font-size:13px}
+  details.seg[open] summary .ch::after{content:" ▲"}
+  details.seg:not([open]) summary .ch::after{content:" ▼"}
+  .opt{list-style:none;margin:0;padding:0}
+  .opt li{display:grid;grid-template-columns:78px 1fr auto;gap:2px 10px;align-items:center;padding:10px 15px;border-top:1px solid #f0eee9}
+  .opt li.pick{background:var(--tangSoft)}
+  .opt .t{font-weight:800;font-size:16px}.opt .t small{font-weight:500;color:var(--sub);font-size:13px}
+  .opt .pr{text-align:right;font-size:15px;font-weight:600}
+  .opt .seat{grid-column:2;font-size:12.5px;color:var(--sub)}
+  .opt .seat.sp{color:var(--tangDeep);font-weight:700}
+  .opt .mk{grid-column:3;text-align:right;color:var(--tang);font-weight:800;font-size:12.5px}
+  .howto{margin-top:14px;background:var(--sand);border:1px solid var(--line);border-radius:16px;padding:14px 15px}
+  .howto .hh{font-family:'Noto Serif KR',serif;font-weight:800;color:var(--sea);font-size:17px;margin-bottom:8px}
+  .howto .hs{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5;margin:0 0 7px}
+  .howto .n{flex:none;width:24px;height:24px;border-radius:50%;background:var(--tang);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+
+  .carhd{display:flex;align-items:center;gap:12px;background:var(--basalt);color:#fff;padding:12px 15px;border-radius:16px 16px 0 0}
+  .carhd svg{width:50px;height:25px;flex:none}
+  .carhd b{display:block;font-size:15px}.carhd span{font-size:13px;opacity:.8}
+  .cars{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-top:0;border-radius:0 0 16px 16px;overflow:hidden}
+  .cars li{display:grid;grid-template-columns:1fr auto;gap:0 10px;padding:11px 15px;border-top:1px solid #f0eee9;align-items:center}
+  .cars li:first-child{border-top:0}
+  .cars li.pick{background:var(--tangSoft)}
+  .cars .cn b{font-size:16.5px;margin-right:6px}.cars .cn small{color:var(--sub);font-size:13px}
+  .cars .ck{font-size:13px;color:#555}
+  .cars .pr{text-align:right;grid-row:1 / span 2;grid-column:2}
+  .cars .pr b{display:block;font-size:16px}
+  .cars .pr small{display:block;font-size:12px;color:var(--sub)}
+  .cars .mk{color:var(--tang);font-weight:800;font-size:12.5px}
+  .sum2{background:var(--sea);color:#fff;border-radius:14px;padding:12px 16px;margin:10px 0 0}
+  .sum2 span{display:block;font-size:13px;opacity:.85}.sum2 b{font-size:17px}
+
+  .closing{display:flex;align-items:center;gap:14px;margin:26px 0 0;padding:18px 18px;border-radius:18px;background:linear-gradient(120deg,var(--seaSoft),var(--tangSoft))}
+  .chb{flex:none;width:44px;height:84px}
+  .closing b{display:block;font-size:22px;color:var(--sea);margin:2px 0 4px}
+  .closing span{font-size:14.5px;color:#3d4a50;line-height:1.55}
+  footer{padding:26px 18px calc(30px + env(safe-area-inset-bottom));text-align:center;font-size:13.5px;color:var(--sub)}
+  footer svg{width:12px;height:22px;vertical-align:-6px;margin-right:4px}
+  .top{position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:30;width:44px;height:44px;border-radius:50%;background:var(--sea);color:#fff;border:0;font-size:20px;box-shadow:0 4px 14px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .2s}
+  .top.show{opacity:.92;pointer-events:auto}
+  @media (min-width:521px){ .cover h1{font-size:44px} }
+  @media (max-width:360px){
+    body{font-size:15px}
+    .cover h1{font-size:33px}
+    .wish{grid-template-columns:1fr}.wart svg{height:110px}
+    .days{gap:3px}.day .p{font-size:13.5px}
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="stone" cx="40%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#8a8f94"/><stop offset=".6" stop-color="#5f6469"/><stop offset="1" stop-color="#43474b"/>
+    </radialGradient>
+    <radialGradient id="stone2" cx="35%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#7c8186"/><stop offset="1" stop-color="#4b4f53"/>
+    </radialGradient>
+    <radialGradient id="tg" cx="35%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#ffc061"/><stop offset=".55" stop-color="#f6921e"/><stop offset="1" stop-color="#d96d0a"/>
+    </radialGradient>
+    <pattern id="pores" width="9" height="9" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="3" r="1.1" fill="#2f3235" opacity=".45"/><circle cx="6.5" cy="7" r=".8" fill="#2f3235" opacity=".35"/>
+    </pattern>
+  </defs>
+  <symbol id="hareubang" viewBox="0 0 140 262">
+    <ellipse cx="70" cy="252" rx="56" ry="7" fill="#000" opacity=".22"/>
+    <rect x="22" y="232" width="96" height="18" rx="5" fill="#3f4347"/>
+    <!-- body -->
+    <path d="M32 138 Q24 196 30 236 L110 236 Q116 196 108 138 Z" fill="url(#stone)"/>
+    <path d="M32 138 Q24 196 30 236 L110 236 Q116 196 108 138 Z" fill="url(#pores)"/>
+    <!-- upper arm (right hand on top) -->
+    <path d="M30 150 Q58 166 94 160 Q106 158 108 168 Q100 180 64 180 Q40 180 31 170 Z" fill="url(#stone2)" stroke="#33373a" stroke-width="1.5"/>
+    <path d="M90 163 L92 177 M97 162 L99 176 M103 163 L104 174" stroke="#33373a" stroke-width="1.3" fill="none"/>
+    <!-- lower arm -->
+    <path d="M110 186 Q82 200 46 196 Q34 195 32 204 Q40 214 76 213 Q102 211 111 200 Z" fill="url(#stone2)" stroke="#33373a" stroke-width="1.5"/>
+    <path d="M38 198 L36 210 M44 197 L43 212 M50 197 L50 212" stroke="#33373a" stroke-width="1.3" fill="none"/>
+    <!-- head -->
+    <ellipse cx="70" cy="106" rx="42" ry="45" fill="url(#stone)"/>
+    <ellipse cx="70" cy="106" rx="42" ry="45" fill="url(#pores)"/>
+    <!-- hat -->
+    <path d="M28 72 Q27 18 70 15 Q113 18 112 72 Z" fill="url(#stone2)"/>
+    <path d="M28 72 Q27 18 70 15 Q113 18 112 72 Z" fill="url(#pores)"/>
+    <ellipse cx="70" cy="72" rx="46" ry="9" fill="#4b4f53" stroke="#33373a" stroke-width="1.5"/>
+    <!-- brows -->
+    <path d="M38 88 Q51 78 63 88 M77 88 Q89 78 102 88" stroke="#33373a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- eyes -->
+    <circle cx="51" cy="101" r="11" fill="#9a9fa4" stroke="#33373a" stroke-width="2"/>
+    <circle cx="89" cy="101" r="11" fill="#9a9fa4" stroke="#33373a" stroke-width="2"/>
+    <circle cx="52" cy="102" r="4.5" fill="#2b2e31"/><circle cx="88" cy="102" r="4.5" fill="#2b2e31"/>
+    <!-- nose -->
+    <path d="M70 104 Q57 126 59 133 Q70 141 81 133 Q83 126 70 104 Z" fill="#7d8287" stroke="#33373a" stroke-width="1.6"/>
+    <circle cx="64.5" cy="132" r="2.2" fill="#2b2e31"/><circle cx="75.5" cy="132" r="2.2" fill="#2b2e31"/>
+    <!-- mouth -->
+    <path d="M57 143 Q70 148 83 143" stroke="#33373a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="gyul" viewBox="0 0 60 60">
+    <ellipse cx="30" cy="36" rx="22" ry="20" fill="url(#tg)"/>
+    <circle cx="23" cy="29" r="1" fill="#fff" opacity=".5"/><circle cx="35" cy="42" r="1" fill="#b85a05" opacity=".5"/><circle cx="40" cy="33" r=".9" fill="#b85a05" opacity=".5"/><circle cx="26" cy="44" r=".9" fill="#b85a05" opacity=".5"/>
+    <path d="M30 17 Q31 13 33 12" stroke="#6b4a1e" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M32 14 Q44 4 54 10 Q46 21 32 14 Z" fill="#3f9b4a"/>
+    <path d="M32 14 Q43 11 51 11" stroke="#2c7a36" stroke-width="1" fill="none"/>
+  </symbol>
+</svg>
+
+<div class="wrap">
+
+<header class="cover" id="top">
+  <span class="credit">협재해변 · 사진 Lcarrion88 · CC BY-SA 4.0</span>
+  <svg class="cover-art" viewBox="0 0 200 270" aria-hidden="true"><use href="#hareubang" x="62" y="40" width="118" height="221"/><use href="#gyul" x="0" y="206" width="52" height="52"/><use href="#gyul" x="40" y="224" width="40" height="40"/><use href="#gyul" x="160" y="222" width="42" height="42"/></svg>
+  <div class="t">
+    <span class="eyebrow">FAMILY TRIP · JEJU 2026</span>
+    <div class="tagline">귤 익는 계절, 아홉 식구가 바다 앞에 모입니다</div>
+    <h1>제주, 우리 가족<br><em>5박 6일</em></h1>
+    <p>2026. 11. 27.(금) ~ 12. 2.(수)<br>애월 바다 보이는 집</p>
+  </div>
+</header>
+<div class="stats">
+  <div><b>9명</b><span>어른 7 · 아이 2</span></div>
+  <div><b>감귤철</b><span>11월 말 · 귤이 가장 맛있을 때</span></div>
+  <div><b>바다 보이는 집</b><span>애월 3층 단독주택 · 5박</span></div>
+  <div><b>차 1대</b><span>카니발 9인승</span></div>
+</div>
+
+<nav class="tabs" id="tabs">
+  <a href="#ask">부탁</a><a href="#wish">기다리는 것</a><a href="#when">누가 언제</a><a href="#flight">비행기</a><a href="#stay">숙소</a><a href="#cost">비용</a><a href="#map">위치</a><a href="#apx1">비행기 바꾸기</a><a href="#apx2">렌터카</a>
+</nav>
+
+<!-- 부탁 -->
+<section id="ask">
+  <div class="ask">
+    <svg class="gy" aria-hidden="true"><use href="#gyul"/></svg>
+    <span class="due">11. 4.(수)까지</span>
+    <h2>부탁드려요</h2>
+    <p class="lead">비행기와 렌터카를 한 번에 예약하려고 합니다. 아래 내용을 <b>단톡방이 아닌 개인 메시지</b>로 보내 주세요.</p>
+    <div class="grp">모두</div>
+    <ul class="items">
+      <li><i>1</i><span>이름<small>신분증에 적힌 그대로</small></span></li>
+      <li><i>2</i><span>생년월일 8자리<small>예: 19650312</small></span></li>
+      <li><i>3</i><span>휴대전화 번호</span></li>
+      <li><i>4</i><span>공항에 가져갈 신분증<small>주민등록증 · 운전면허증 · 모바일 신분증</small></span></li>
+      <li><i>5</i><span>부칠 짐(캐리어) 있는지, 몇 개인지</span></li>
+    </ul>
+    <div class="grp">운전하실 분</div>
+    <ul class="items"><li><i>6</i><span>면허 종류와 면허 번호<small>1종·2종 보통</small></span></li></ul>
+    <div class="grp">시우 · 지우</div>
+    <ul class="items"><li><i>7</i><span>생년월일, 키</span></li></ul>
+    <p class="warn">주민등록번호 뒷자리와 카드 번호는 보내지 마세요. 항공권의 이름이 신분증과 한 글자라도 다르면 탑승이 안 될 수 있습니다.</p>
+  </div>
+
+  <h3>챙길 것</h3>
+  <p class="hint">공항 가기 전에 한 번 더 확인해 주세요</p>
+  <div class="bring">
+    
+      <div><svg aria-hidden="true" viewBox="0 0 32 32"><rect x="3" y="7" width="26" height="18" rx="3" stroke="#0d4f5e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="15" r="3" stroke="#0d4f5e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M6.5 22c1-2.5 2.6-3.5 4.5-3.5s3.5 1 4.5 3.5M19 13h6M19 17h6" stroke="#0d4f5e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="7" width="26" height="4" fill="#ef7d1a" opacity=".25"/></svg><b>신분증</b><span>주민등록증 · 운전면허증 · 모바일 신분증 중 하나</span></div>
+      <div><svg aria-hidden="true" viewBox="0 0 32 32"><circle cx="16" cy="10" r="5" stroke="#0d4f5e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 28c0-5 3.5-9 8-9s8 4 8 9" stroke="#0d4f5e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 8c2-3 8-3 10 0" stroke="#ef7d1a" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M5 18h5v8H5zM5 21h5" stroke="#0d4f5e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><b>아이 서류</b><span>건강보험증 또는 주민등록등본(3개월 이내)</span></div>
+      <div><svg aria-hidden="true" viewBox="0 0 32 32"><path d="M5 20l2.5-7c.5-1.3 1.6-2 3-2h11c1.4 0 2.5.7 3 2L27 20v5H5z" stroke="#0d4f5e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20h22" stroke="#0d4f5e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="24" r="2.4" fill="#ef7d1a"/><circle cx="22" cy="24" r="2.4" fill="#ef7d1a"/><path d="M10 15h12" stroke="#0d4f5e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><b>운전하실 분</b><span>실물 운전면허증, 본인 명의 신용카드</span></div>
+      <div><svg aria-hidden="true" viewBox="0 0 32 32"><rect x="7" y="9" width="18" height="18" rx="3" stroke="#0d4f5e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 9V6h8v3M12 13v10M20 13v10" stroke="#0d4f5e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 28v1.5M22 28v1.5" stroke="#0d4f5e" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="7" y="9" width="18" height="5" fill="#ef7d1a" opacity=".22"/></svg><b>짐</b><span>제주항공 15kg, 대한항공·아시아나 20kg 안팎, 트리니티는 예약 때 확인</span></div>
+  </div>
+  <div class="div" aria-hidden="true"></div>
+</section>
+
+<!-- 기다리는 것 -->
+<section id="wish">
+  <div class="wishhead">
+    <svg class="whb" aria-hidden="true"><use href="#hareubang"/></svg>
+    <div><div class="eyebrow2">JEJU IN LATE NOVEMBER</div><h2 class="serif">11월 말, 제주에서 기다리는 것</h2><p>귤이 익고, 억새가 은빛이고, 동백이 피기 시작하는 때입니다. 아홉 식구가 함께라 더 좋은 것들을 골라 봤어요.</p></div>
+  </div>
+  <div class="wishes"><div class="wish"><div class="wart"><svg viewBox="0 0 200 96" preserveAspectRatio="xMidYMid slice"><rect width="200" height="96" fill="#fff1dc"/><circle cx="170" cy="18" r="40" fill="#ffe2b0"/>
+<path d="M40 96 Q48 58 100 58 Q152 58 160 96 Z" fill="#c98b4a"/><path d="M44 80 L156 80 M48 68 L152 68" stroke="#a86f35" stroke-width="2"/>
+<use href="#gyul" x="52" y="30" width="40" height="40"/><use href="#gyul" x="82" y="24" width="44" height="44"/><use href="#gyul" x="114" y="32" width="38" height="38"/>
+<use href="#gyul" x="12" y="54" width="30" height="30"/><use href="#gyul" x="160" y="58" width="28" height="28"/></svg></div><div class="wtx"><b>감귤 따기 체험</b><small>11월 말 · 수확이 한창인 때</small><span>아이들과 귤밭에서 직접 따서 그 자리에서 까 먹기. 시우·지우가 제일 좋아할 시간</span></div></div><div class="wish"><div class="wart"><svg viewBox="0 0 200 96" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7cc8f0"/><stop offset="1" stop-color="#d8f1fb"/></linearGradient><linearGradient id="se" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#18a9b8"/><stop offset="1" stop-color="#5fd6cf"/></linearGradient></defs>
+<rect width="200" height="96" fill="url(#sk)"/><path d="M110 46 Q128 32 146 40 Q156 42 166 46 Z" fill="#4f7a55"/><rect y="46" width="200" height="50" fill="url(#se)"/>
+<path d="M0 62 Q20 56 40 62 T80 62 T120 62 T160 62 T200 62" stroke="#fff" stroke-width="2.5" fill="none" opacity=".85"/><path d="M0 76 Q25 70 50 76 T100 76 T150 76 T200 76" stroke="#fff" stroke-width="2" fill="none" opacity=".7"/>
+<path d="M0 96 L0 82 Q20 74 34 80 Q46 72 60 84 L64 96 Z" fill="#2d3033"/><circle cx="168" cy="20" r="10" fill="#fff6c8"/></svg></div><div class="wtx"><b>협재 · 애월 바다</b><small>숙소에서 서쪽으로 가까이</small><span>옥빛 바다와 까만 현무암, 바다 건너 비양도. 겨울 바다라 수영 대신 산책과 사진</span></div></div><div class="wish"><div class="wart"><svg viewBox="0 0 200 96" preserveAspectRatio="xMidYMid slice"><rect width="200" height="96" fill="#f3ead2"/><circle cx="40" cy="24" r="12" fill="#ffd27a"/><path d="M0 96 L0 70 Q60 22 120 40 Q160 50 200 64 L200 96 Z" fill="#c9a85c"/><path d="M0 96 L0 82 Q70 58 200 80 L200 96 Z" fill="#b08a3e"/><path d="M4 96 Q8 74 14 68" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="14" cy="67" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 14 67)"/><path d="M17 96 Q21 74 27 75" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="27" cy="74" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 27 74)"/><path d="M30 96 Q34 74 40 70" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="40" cy="69" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 40 69)"/><path d="M43 96 Q47 74 53 65" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="53" cy="64" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 53 64)"/><path d="M56 96 Q60 74 66 72" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="66" cy="71" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 66 71)"/><path d="M69 96 Q73 74 79 67" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="79" cy="66" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 79 66)"/><path d="M82 96 Q86 74 92 74" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="92" cy="73" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 92 73)"/><path d="M95 96 Q99 74 105 69" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="105" cy="68" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 105 68)"/><path d="M108 96 Q112 74 118 64" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="118" cy="63" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 118 63)"/><path d="M121 96 Q125 74 131 71" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="131" cy="70" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 131 70)"/><path d="M134 96 Q138 74 144 66" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="144" cy="65" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 144 65)"/><path d="M147 96 Q151 74 157 73" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="157" cy="72" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 157 72)"/><path d="M160 96 Q164 74 170 68" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="170" cy="67" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 170 67)"/><path d="M173 96 Q177 74 183 75" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="183" cy="74" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 183 74)"/><path d="M186 96 Q190 74 196 70" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="196" cy="69" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 196 69)"/><path d="M199 96 Q203 74 209 65" stroke="#f7f1e1" stroke-width="1.6" fill="none"/><ellipse cx="209" cy="64" rx="3" ry="6" fill="#fffaf0" opacity=".9" transform="rotate(30 209 64)"/></svg></div><div class="wtx"><b>억새 오름</b><small>새별오름 · 늦가을</small><span>은빛 억새가 바람에 눕는 오름. 11월 말이면 끝물이지만 다 같이 오르기 좋은 낮은 오름</span></div></div><div class="wish"><div class="wart"><svg viewBox="0 0 200 96" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="ss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b3f8c"/><stop offset=".55" stop-color="#f08a4b"/><stop offset="1" stop-color="#ffcf7a"/></linearGradient></defs>
+<rect width="200" height="96" fill="url(#ss)"/><circle cx="120" cy="58" r="18" fill="#ffe9a8"/><rect y="58" width="200" height="38" fill="#2f4d6b"/>
+<path d="M100 64 L140 64 M104 70 L136 70 M110 76 L130 76 M114 82 L126 82" stroke="#ffd98a" stroke-width="2.4"/>
+<path d="M0 96 L0 50 L22 50 L22 40 L44 40 L44 58 L60 58 L60 96 Z" fill="#1d2a3a"/><rect x="28" y="46" width="5" height="5" fill="#ffd98a"/><rect x="36" y="46" width="5" height="5" fill="#ffd98a"/></svg></div><div class="wtx"><b>애월 노을과 카페</b><small>해 질 녘 · 바다 앞 카페</small><span>하루 끝에 바다로 지는 해를 보며 따뜻한 차 한 잔. 어른들의 시간</span></div></div><div class="wish"><div class="wart"><svg viewBox="0 0 200 96" preserveAspectRatio="xMidYMid slice"><rect width="200" height="96" fill="#fdecef"/><g transform="translate(40 40) scale(1.2)"><ellipse cx="-9" cy="6" rx="11" ry="6" fill="#2f7d4a" transform="rotate(-30)"/><ellipse cx="12" cy="8" rx="11" ry="6" fill="#3a8f56" transform="rotate(25)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(0)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(72)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(144)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(216)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(288)"/><circle r="5" fill="#ffd34d"/></g><g transform="translate(100 56) scale(1.5)"><ellipse cx="-9" cy="6" rx="11" ry="6" fill="#2f7d4a" transform="rotate(-30)"/><ellipse cx="12" cy="8" rx="11" ry="6" fill="#3a8f56" transform="rotate(25)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(0)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(72)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(144)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(216)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(288)"/><circle r="5" fill="#ffd34d"/></g><g transform="translate(160 36) scale(1.1)"><ellipse cx="-9" cy="6" rx="11" ry="6" fill="#2f7d4a" transform="rotate(-30)"/><ellipse cx="12" cy="8" rx="11" ry="6" fill="#3a8f56" transform="rotate(25)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(0)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(72)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(144)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(216)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(288)"/><circle r="5" fill="#ffd34d"/></g><g transform="translate(150 80) scale(0.8)"><ellipse cx="-9" cy="6" rx="11" ry="6" fill="#2f7d4a" transform="rotate(-30)"/><ellipse cx="12" cy="8" rx="11" ry="6" fill="#3a8f56" transform="rotate(25)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(0)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(72)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(144)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(216)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(288)"/><circle r="5" fill="#ffd34d"/></g><g transform="translate(20 82) scale(0.7)"><ellipse cx="-9" cy="6" rx="11" ry="6" fill="#2f7d4a" transform="rotate(-30)"/><ellipse cx="12" cy="8" rx="11" ry="6" fill="#3a8f56" transform="rotate(25)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(0)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(72)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(144)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(216)"/><ellipse cx="0" cy="-9" rx="8" ry="10" fill="#d61f45" transform="rotate(288)"/><circle r="5" fill="#ffd34d"/></g></svg></div><div class="wtx"><b>동백 피기 시작</b><small>11월 말 ~ 겨울</small><span>겨울 제주를 붉게 물들이는 동백이 막 피어나는 때. 동백 숲길 산책</span></div></div><div class="wish"><div class="wart"><svg viewBox="0 0 200 96" preserveAspectRatio="xMidYMid slice"><rect width="200" height="96" fill="#2a2522"/><circle cx="100" cy="58" r="44" fill="#3b3430"/><circle cx="100" cy="58" r="38" fill="none" stroke="#6b5f57" stroke-width="2"/><path d="M70 40 L130 40" stroke="#575049" stroke-width="2"/><path d="M70 48 L130 48" stroke="#575049" stroke-width="2"/><path d="M70 56 L130 56" stroke="#575049" stroke-width="2"/><path d="M70 64 L130 64" stroke="#575049" stroke-width="2"/><path d="M70 72 L130 72" stroke="#575049" stroke-width="2"/><rect x="72" y="38" width="26" height="12" rx="4" fill="#8a4a3a"/><rect x="72" y="38" width="26" height="4" rx="2" fill="#f2e0c8"/>
+<rect x="104" y="46" width="26" height="12" rx="4" fill="#7a3f31"/><rect x="104" y="46" width="26" height="4" rx="2" fill="#f2e0c8"/>
+<rect x="80" y="60" width="26" height="12" rx="4" fill="#8a4a3a"/><rect x="80" y="60" width="26" height="4" rx="2" fill="#f2e0c8"/>
+<path d="M150 20 L186 70 M158 16 L192 66" stroke="#c9a46a" stroke-width="3" stroke-linecap="round"/>
+<path d="M84 30 Q80 20 86 12 M100 28 Q96 18 102 8 M116 30 Q112 20 118 12" stroke="#ddd" stroke-width="2" fill="none" opacity=".5" stroke-linecap="round"/></svg></div><div class="wtx"><b>흑돼지 · 제철 방어</b><small>제주의 저녁</small><span>아홉 식구가 둘러앉아 굽는 흑돼지, 겨울이 제철인 방어회. 고기국수와 귤 디저트까지</span></div></div></div>
+  <div class="together"><svg aria-hidden="true"><use href="#gyul"/></svg><span><b>일정은 함께 정해요.</b> 가 보고 싶은 곳이나 먹고 싶은 것이 있으면 개인 메시지에 같이 적어 주세요.</span></div>
+  <div class="div" aria-hidden="true"></div>
+</section>
+
+<!-- 누가 언제 -->
+<section id="when">
+  <div class="sec"><span class="no">01</span><h2>누가 언제 제주에 있나요</h2></div>
+  <p class="hint">날짜 아래 숫자 = 그날 밤 숙소에 있는 사람</p>
+  <div class="days">
+    <div class="day we"><div class="d">27</div><div class="w">금</div><div class="p">5<small>명</small></div></div>
+    <div class="day we full"><div class="d">28</div><div class="w">토</div><div class="p">9<small>명</small></div></div>
+    <div class="day we"><div class="d">29</div><div class="w">일</div><div class="p">5<small>명</small></div></div>
+    <div class="day"><div class="d">30</div><div class="w">월</div><div class="p">5<small>명</small></div></div>
+    <div class="day"><div class="d">1</div><div class="w">화</div><div class="p">5<small>명</small></div></div>
+    <div class="day"><div class="d">2</div><div class="w">수</div><div class="p" style="font-size:12.5px;color:var(--sub)">귀가</div></div>
+  </div>
+
+  <div class="who g1">
+    <div class="hd"><b>27일(금) ~ 29일(일)</b><span>4명 함께</span></div>
+    <div class="bd">
+      <div class="nm">이미순 · 이미경 · 김태연 · 이승훈</div>
+      <div class="span"><i style="grid-column:1 / 4"></i></div>
+      <div class="leg"><div>트리니티 20:05<small>27일 대구 출발</small></div><div>제주항공 18:10<small>29일 제주 출발</small></div></div>
+    </div>
+  </div>
+  <div class="who g1">
+    <div class="hd"><b>27일(금) ~ 12. 2.(수)</b><span>1명</span></div>
+    <div class="bd">
+      <div class="nm">김연희</div>
+      <div class="span"><i style="grid-column:1 / 7"></i></div>
+      <div class="leg"><div>트리니티 20:05<small>27일 대구 출발</small></div><div>대한항공 15:30<small>2일 제주 출발</small></div></div>
+    </div>
+  </div>
+  <div class="who g2">
+    <div class="hd"><b>28일(토) ~ 12. 2.(수)</b><span>4명 함께</span></div>
+    <div class="bd">
+      <div class="nm">이소은 · 박순랑 · 박시우<small>(초2)</small> · 박지우<small>(초1)</small></div>
+      <div class="span"><i style="grid-column:2 / 7"></i></div>
+      <div class="leg"><div>아시아나 16:10<small>28일 대구 출발</small></div><div>대한항공 15:30<small>2일 제주 출발</small></div></div>
+    </div>
+  </div>
+  <div class="who car">
+    <div class="hd"><b>렌터카 카니발 9인승</b><span>완전자차</span></div>
+    <div class="bd">
+      <div class="span"><i style="grid-column:1 / 7"></i></div>
+      <div class="leg"><div>27일 21:30<small>공항에서 받기</small></div><div>2일 13:00<small>반납</small></div></div>
+    </div>
+  </div>
+  <div class="div" aria-hidden="true"></div>
+</section>
+
+<!-- 비행기 -->
+<section id="flight">
+  <div class="sec"><span class="no">02</span><h2>비행기</h2></div>
+  <p class="hint">예약 전 · 다른 시간은 <a href="#apx1" style="color:var(--sea2);font-weight:700">비행기 바꾸기</a>에서</p>
+  <div class="fl"><span class="dt">11. 27.(금)</span><span class="rt">대구<i>→</i>제주</span><span class="tm num">20:05 <small>→ 21:10</small></span><span class="al tw">트리니티</span><div class="ppl">이미순 · 김연희 · 이미경 · 김태연 · 이승훈</div></div>
+  <div class="fl"><span class="dt">11. 28.(토)</span><span class="rt">대구<i>→</i>제주</span><span class="tm num">16:10 <small>→ 17:15</small></span><span class="al oz">아시아나</span><div class="ppl">이소은 · 박순랑 · 시우 · 지우</div></div>
+  <div class="fl"><span class="dt">11. 29.(일)</span><span class="rt">제주<i>→</i>대구</span><span class="tm num">18:10 <small>→ 19:15</small></span><span class="al jj">제주항공</span><div class="ppl">이미순 · 이미경 · 김태연 · 이승훈</div></div>
+  <div class="fl"><span class="dt">12. 2.(수)</span><span class="rt">제주<i>→</i>대구</span><span class="tm num">15:30 <small>→ 16:35</small></span><span class="al ke">대한항공</span><div class="ppl">김연희 · 이소은 · 박순랑 · 시우 · 지우</div></div>
+
+  <h3>도착하는 날 흐름</h3>
+  <p class="hint">예약이 끝나면 항공권 문자를 한 분씩 보내 드립니다</p>
+  <div class="flow f1"><div class="fh"><b>11. 27.(금)</b><span>먼저 오는 5명</span></div>
+    <ol class="steps"><li><b>21:10</b><span>제주공항 도착</span></li><li><b>셔틀</b><span>도착층 밖 렌터카 승강장</span></li><li><b>21:30</b><span>카니발 받기 · 부스터 2개</span></li><li><b>22:00쯤</b><span>숙소 도착</span></li></ol></div>
+  <div class="flow f2"><div class="fh"><b>11. 28.(토)</b><span>뒤에 오는 4명</span></div>
+    <ol class="steps"><li><b>17:15</b><span>제주공항 도착</span></li><li><b>마중</b><span>먼저 온 가족이 카니발로 픽업</span></li><li><b>17:40쯤</b><span>공항 출발</span></li><li><b>18:00쯤</b><span>숙소 도착 · 아홉 식구 첫 저녁</span></li></ol></div>
+  <div class="div" aria-hidden="true"></div>
+</section>
+
+<!-- 숙소 -->
+<section id="stay">
+  <div class="sec"><span class="no">03</span><h2>숙소 — 바다가 보이는 3층 집</h2></div>
+  <p class="hint">애월 하귀 해안도로 · 5박</p>
+  <div class="hero">
+    <span class="seatag">창밖으로 바다 · 3층 테라스에서 노을</span>
+    <a class="lab" href="https://www.airbnb.co.kr/rooms/1664410570251373902?check_in=2026-11-27&amp;check_out=2026-12-02&amp;adults=7&amp;children=2"><b>애월 해안도로 오션뷰 단독주택</b><span>3층 집 한 채 통째로 · 슈퍼호스트 · 평점 4.89(후기 9개)</span></a>
+  </div>
+  <div class="gal">
+    <figure><img src="img/ocean_01.jpg" alt="외관" loading="lazy"><figcaption>외관</figcaption></figure>
+    <figure><img src="img/ocean_04.jpg" alt="3층 테라스" loading="lazy"><figcaption>3층 테라스</figcaption></figure>
+    <figure><img src="img/ocean_05.jpg" alt="거실 · 식탁" loading="lazy"><figcaption>거실 · 식탁</figcaption></figure>
+    <figure><img src="img/ocean_14.jpg" alt="침실 · 바다 쪽 창" loading="lazy"><figcaption>침실 · 바다 쪽 창</figcaption></figure>
+    <figure><img src="img/ocean_08.jpg" alt="창가 침실" loading="lazy"><figcaption>창가 침실</figcaption></figure>
+    <figure><img src="img/ocean_13.jpg" alt="주방" loading="lazy"><figcaption>주방</figcaption></figure>
+    <figure><img src="img/ocean_10.jpg" alt="침실" loading="lazy"><figcaption>침실</figcaption></figure>
+    <figure><img src="img/ocean_03.jpg" alt="바베큐 마당" loading="lazy"><figcaption>바베큐 마당</figcaption></figure>
+  </div>
+  <p class="swipe">옆으로 밀어 사진 8장 보기 →</p>
+  <div class="facts">
+    <div><small>체크인</small><b>오후 4시부터</b><span>금요일 밤 22시쯤 도착</span></div>
+    <div><small>체크아웃</small><b>오전 11시</b><span>12. 2. 짐 싣고 관광 후 공항</span></div>
+    <div><small>방</small><b>침실 4 · 욕실 3</b><span>퀸 4 + 데이베드 · 이불 추가 확인</span></div>
+    <div><small>층 구성</small><b>1층 거실·주방</b><span>2층 방 3 · 3층 방 1과 테라스</span></div>
+    <div><small>공항에서</small><b>차로 약 15분</b><span>편의점 1분, 마트 5분</span></div>
+    <div><small>마당</small><b>바베큐 무료</b><span>숯·일회용 불판은 직접 준비</span></div>
+  </div>
+  <a class="abnb" href="https://www.airbnb.co.kr/rooms/1664410570251373902?check_in=2026-11-27&amp;check_out=2026-12-02&amp;adults=7&amp;children=2"><span class="abic">airbnb</span><span class="abt"><b>에어비앤비에서 숙소 보기</b><small>airbnb.co.kr/rooms/1664410570251373902</small></span><span class="abgo">열기 →</span></a>
+  <div class="note"><b>알아 두세요</b><span>사진으로 보면 바다는 집 앞 들판 너머로 보입니다. 흐리거나 안개 낀 날에는 잘 안 보일 수 있습니다. 침대가 4개라 이불을 더 받을 수 있는지 예약 때 호스트에게 묻겠습니다.</span></div>
+  <div class="div" aria-hidden="true"></div>
+</section>
+
+<!-- 비용 -->
+<section id="cost">
+  <div class="sec"><span class="no">04</span><h2>예상 비용</h2></div>
+  <p class="hint">11. 1.~2. 조회</p>
+  <div class="cost">
+    <div class="row"><span><i style="background:var(--sea2)"></i>비행기 · 18좌석</span><b class="num">약 165만</b></div>
+    <div class="row"><span><i style="background:var(--tang)"></i>숙소 · 5박</span><b class="num">약 153만</b></div>
+    <div class="row"><span><i style="background:var(--basalt)"></i>렌터카 · 1대</span><b class="num">약 25만</b></div>
+    <div class="row tot"><span>합계</span><b class="num">약 343만 원</b></div>
+  </div>
+  <div class="bar100"><i style="width:48%;background:var(--sea2)"></i><i style="width:44.8%;background:var(--tang)"></i><i style="width:7.2%;background:var(--basalt)"></i></div>
+  <p class="fine">숙소 1,353,500원 + 전기·가스·수도 약 18만 원(11월 호스트 평균) · 렌터카는 카니발 기간이 하루 늘어 약 25만 원으로 추정(예약 때 다시 조회) · 비행기는 어른 요금으로 계산한 최대치라 시우·지우 어린이 요금이 적용되면 더 내려갑니다. 기름값·식비·입장료는 빠져 있습니다.</p>
+  <div class="div" aria-hidden="true"></div>
+</section>
+
+<!-- 위치 -->
+<section id="map">
+  <div class="sec"><span class="no">05</span><h2>숙소 위치</h2></div>
+  <p class="hint">제주시 애월읍 하귀 · 섬의 서북쪽</p>
+  <div class="map"><img src="img/jeju_island.jpg" alt="제주도 전체 지도" loading="lazy"><div class="pin me l" style="left:32.17%;top:26.56%"><i></i><span>우리 숙소</span></div><div class="pin ap" style="left:43.68%;top:20.86%"><i></i><span>제주공항</span></div><div class="pin sm" style="left:47.71%;top:53.08%"><i></i><span>한라산</span></div><div class="pin sm" style="left:28.58%;top:52.12%"><i></i><span>새별오름</span></div><div class="pin sm" style="left:15.53%;top:45.9%"><i></i><span>협재해변</span></div><div class="pin sm l" style="left:93.62%;top:31.67%"><i></i><span>성산일출봉</span></div></div>
+  <p class="fine">제주공항은 섬 북쪽 가운데입니다. 숙소는 공항에서 서쪽으로 직선 약 10km, 해안도로 옆에 있습니다.</p>
+
+  <h3>공항 ↔ 숙소 확대</h3>
+  <p class="hint">차로 약 15분</p>
+  <div class="map"><img src="img/jeju_near.jpg" alt="공항과 숙소 주변 지도" loading="lazy"><svg class="mroute" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="76.88" y1="16.78" x2="41.16" y2="35.07" stroke="#14708a" stroke-width="3" stroke-dasharray="8 6" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg><div class="rlabel" style="left:59.02%;top:25.93%">약 15분</div><span class="osm">© OpenStreetMap contributors</span><div class="pin me l" style="left:41.16%;top:35.07%"><i></i><span>우리 숙소(대략)</span></div><div class="pin ap" style="left:76.88%;top:16.78%"><i></i><span>제주공항</span></div></div>
+  <div class="tips">
+    <div><b>가는 길</b><span>공항 렌터카 차고지에서 차를 받아 애월 하귀 방향으로 약 15분. 지도의 점선은 방향만 보여 주며 실제 도로는 내비게이션을 따라가세요.</span></div>
+    <div><b>정확한 주소</b><span>에어비앤비 예약이 확정되면 호스트가 알려 줍니다. 지도 위치는 에어비앤비가 보여 주는 대략 위치입니다. <a href="https://www.airbnb.co.kr/rooms/1664410570251373902?check_in=2026-11-27&amp;check_out=2026-12-02&amp;adults=7&amp;children=2">숙소 보기 →</a></span></div>
+  </div>
+  <div class="div" aria-hidden="true"></div>
+</section>
+
+<!-- 부록 1 -->
+<section id="apx1">
+  <div class="sec"><span class="no">부록 1</span><h2>비행기 바꿀 때 보는 일정표</h2></div>
+  <p class="hint">2026. 11. 1. 조회 · 1인 편도 · 세금 포함</p>
+  <p class="apx-lead">지금 고른 편은 <b class="pk">✔ 선택</b>으로 표시했습니다. 시간을 바꾸고 싶으면 같은 날 다른 편을 골라 알려 주세요. 좌석과 요금은 그때그때 달라집니다.</p>
+  <details class="seg" open><summary><b>① 11. 27.(금)</b><span class="ch">4편</span><span class="rt">대구 → 제주</span><span class="sw">이미순 · 김연희 · 이미경 · 김태연 · 이승훈</span></summary><ul class="opt"><li class=""><span><span class="al oz">아시아나</span></span><span class="num t">16:10<small> → 17:15</small></span><span class="num pr">107,300원</span><span class="seat">할인</span><span class="mk"></span></li><li class=""><span><span class="al jj">제주항공</span></span><span class="num t">16:25<small> → 17:30</small></span><span class="num pr">94,200원</span><span class="seat">할인</span><span class="mk"></span></li><li class=""><span><span class="al ke">대한항공</span></span><span class="num t">17:15<small> → 18:25</small></span><span class="num pr">119,100원</span><span class="seat">할인</span><span class="mk"></span></li><li class="pick"><span><span class="al tw">트리니티</span></span><span class="num t">20:05<small> → 21:10</small></span><span class="num pr">93,260원</span><span class="seat">할인</span><span class="mk">✔ 선택</span></li></ul></details>
+  <details class="seg" open><summary><b>② 11. 28.(토)</b><span class="ch">5편</span><span class="rt">대구 → 제주</span><span class="sw">이소은 · 박순랑 · 시우 · 지우</span></summary><ul class="opt"><li class=""><span><span class="al tw">트리니티</span></span><span class="num t">06:10<small> → 07:15</small></span><span class="num pr">98,700원</span><span class="seat">할인</span><span class="mk"></span></li><li class="pick"><span><span class="al oz">아시아나</span></span><span class="num t">16:10<small> → 17:15</small></span><span class="num pr">87,300원</span><span class="seat">할인</span><span class="mk">✔ 선택</span></li><li class=""><span><span class="al jj">제주항공</span></span><span class="num t">16:25<small> → 17:30</small></span><span class="num pr">85,300원</span><span class="seat">할인</span><span class="mk"></span></li><li class=""><span><span class="al ke">대한항공</span></span><span class="num t">17:15<small> → 18:25</small></span><span class="num pr">87,100원</span><span class="seat">할인</span><span class="mk"></span></li><li class=""><span><span class="al tw">트리니티</span></span><span class="num t">20:05<small> → 21:10</small></span><span class="num pr">50,800원</span><span class="seat">할인</span><span class="mk"></span></li></ul></details>
+  <details class="seg" open><summary><b>③ 11. 29.(일)</b><span class="ch">6편</span><span class="rt">제주 → 대구</span><span class="sw">이미순 · 이미경 · 김태연 · 이승훈</span></summary><ul class="opt"><li class=""><span><span class="al oz">아시아나</span></span><span class="num t">07:30<small> → 08:35</small></span><span class="num pr">56,300원</span><span class="seat sp">특가</span><span class="mk"></span></li><li class=""><span><span class="al tw">트리니티</span></span><span class="num t">08:15<small> → 09:20</small></span><span class="num pr">50,800원</span><span class="seat">할인</span><span class="mk"></span></li><li class=""><span><span class="al ke">대한항공</span></span><span class="num t">09:50<small> → 10:55</small></span><span class="num pr">103,100원</span><span class="seat">할인</span><span class="mk"></span></li><li class=""><span><span class="al jj">제주항공</span></span><span class="num t">14:40<small> → 15:45</small></span><span class="num pr">117,800원</span><span class="seat">일반</span><span class="mk"></span></li><li class="pick"><span><span class="al jj">제주항공</span></span><span class="num t">18:10<small> → 19:15</small></span><span class="num pr">117,800원</span><span class="seat">일반</span><span class="mk">✔ 선택</span></li><li class=""><span><span class="al tw">트리니티</span></span><span class="num t">21:55<small> → 23:00</small></span><span class="num pr">119,700원</span><span class="seat">일반</span><span class="mk"></span></li></ul></details>
+  <details class="seg" open><summary><b>④ 12. 2.(수)</b><span class="ch">4편</span><span class="rt">제주 → 대구</span><span class="sw">김연희 · 이소은 · 박순랑 · 시우 · 지우</span></summary><ul class="opt"><li class=""><span><span class="al oz">아시아나</span></span><span class="num t">14:25<small> → 15:30</small></span><span class="num pr">70,300원</span><span class="seat">할인</span><span class="mk"></span></li><li class=""><span><span class="al jj">제주항공</span></span><span class="num t">14:40<small> → 15:45</small></span><span class="num pr">64,700원</span><span class="seat">할인</span><span class="mk"></span></li><li class="pick"><span><span class="al ke">대한항공</span></span><span class="num t">15:30<small> → 16:35</small></span><span class="num pr">72,100원</span><span class="seat sp">특가</span><span class="mk">✔ 선택</span></li><li class=""><span><span class="al tw">트리니티</span></span><span class="num t">17:55<small> → 19:00</small></span><span class="num pr">50,580원</span><span class="seat">할인</span><span class="mk"></span></li></ul></details>
+  <div class="tips">
+    <div><b>특가석</b><span>환불 수수료가 크거나 환불이 안 될 수 있습니다. 바뀔 가능성이 있으면 할인석을 고르세요.</span></div>
+    <div><b>렌터카 시간</b><span>도착 편을 바꾸면 차 인수 시간(21:30)도, 12. 2. 출발 편을 바꾸면 반납 시간(13:00)도 함께 바뀝니다.</span></div>
+    <div><b>트리니티항공</b><span>옛 티웨이항공입니다. 저비용 항공이라 부치는 짐은 15kg 안팎입니다.</span></div>
+  </div>
+  <div class="howto"><div class="hh">비행기를 바꾸고 싶을 때</div>
+    <div class="hs"><span class="n">1</span><span>위 표에서 같은 날 <b>원하는 편</b>을 고릅니다</span></div>
+    <div class="hs"><span class="n">2</span><span>이승훈에게 <b>이름 · 날짜 · 편</b>을 개인 메시지로</span></div>
+    <div class="hs"><span class="n">3</span><span>바뀐 <b>항공권 문자</b>를 다시 보내 드립니다</span></div>
+  </div>
+  <div class="div" aria-hidden="true"></div>
+</section>
+
+<!-- 부록 2 -->
+<section id="apx2">
+  <div class="sec"><span class="no">부록 2</span><h2>렌터카 차종 고를 때 보는 표</h2></div>
+  <p class="hint">제주패스 · 2026. 11. 1. 조회 · 기간 전체 요금</p>
+  <p class="apx-lead">카니발 한 대를 <b class="pk">완전자차</b>(사고 나도 내 돈 안 나가는 보험)로 고르고, 지금 고른 차는 <b class="pk">✔ 선택</b>으로 표시했습니다. 다른 차를 원하시면 알려 주세요.</p>
+  <div class="carhd"><svg viewBox="0 0 64 32" aria-hidden="true"><path d="M4 24V12c0-3 2-5 5-5h34c3 0 5 1 7 3l8 7c2 1 2 3 2 5v4H4z" fill="#fff" opacity=".92"/><path d="M9 10h9v7H9zM21 10h9v7h-9zM33 10h9v7h-9zM45 10h3l6 7h-9z" fill="#2a2d30"/><circle cx="15" cy="26" r="4.5" fill="#ef7d1a" stroke="#2a2d30" stroke-width="2"/><circle cx="49" cy="26" r="4.5" fill="#ef7d1a" stroke="#2a2d30" stroke-width="2"/></svg><div><b>11. 27.(금) 21:30 ~ 12. 2.(수) 13:00</b><span>27일 5명 → 28일 공항 마중 후 9명 모두</span></div></div>
+  <ul class="cars">
+    <li><div class="cn"><b>K5</b><small>중형 세단</small></div><div class="pr"><b class="num">183,300원</b><small>고급자차 143,300원</small></div><div class="ck">5인 · LPG/휘발유</div></li>
+    <li class="pick"><div class="cn"><b>카니발</b><small>4세대 · 승합</small> <span class="mk">✔ 선택</span></div><div class="pr"><b class="num">202,600원</b><small>고급자차 163,600원</small></div><div class="ck">9인 · 경유</div></li>
+    <li><div class="cn"><b>쏘렌토</b><small>중형 SUV</small></div><div class="pr"><b class="num">204,400원</b><small>고급자차 164,400원</small></div><div class="ck">7인 · 경유</div></li>
+    <li><div class="cn"><b>팰리세이드</b><small>대형 SUV</small></div><div class="pr"><b class="num">212,000원</b><small>고급자차 172,000원</small></div><div class="ck">8인 · 경유</div></li>
+  </ul>
+  <p class="fine">요금은 완전자차 기준(작은 글씨는 고급자차). 5인승에 부스터 시트 2개를 놓으면 비좁습니다. 카니발은 9명이 한 대로 함께 움직일 수 있고 29일 저녁부터 5명도 넉넉합니다. 표의 요금은 28일 18:00 인수 기준이라, 27일 21:30 인수로 바꾸면 약 25만 원 안팎으로 예상되며 예약 때 다시 조회합니다.</p>
+  <div class="sum2"><span>선택한 차 (완전자차)</span><b class="num">카니발 약 25만 원 (기간 늘어 추정)</b></div>
+  <div class="tips">
+    <div><b>차 받는 곳</b><span>공항 도착층 밖 렌터카 셔틀 승강장 → 업체 셔틀로 차고지까지 10~20분</span></div>
+    <div><b>운전자 조건</b><span>만 30세 · 면허 3년 이상 기준 요금입니다. 교대 운전자도 미리 등록해야 보험이 됩니다.</span></div>
+    <div><b>아이 좌석</b><span>카니발에 부스터 시트 2개 요청 (키 140cm 미만 권장)</span></div>
+    <div><b>시간이 바뀌면</b><span>비행기를 바꾸면 인수·반납 시간도 바꿔야 해서 요금이 달라질 수 있습니다.</span></div>
+  </div>
+  <div class="closing">
+    <svg class="chb" aria-hidden="true"><use href="#hareubang"/></svg>
+    <div><div class="eyebrow2">SEE YOU IN JEJU</div><b class="serif">제주에서 만나요</b>
+    <span>귤 한 봉지 들고, 애월 우리 숙소에서. 아홉 식구가 다 모이는 11월 28일 저녁을 기다립니다.</span></div>
+  </div>
+</section>
+
+<footer><svg aria-hidden="true"><use href="#hareubang"/></svg>제주 가족여행 안내 · 궁금한 점은 이승훈에게 연락 주세요</footer>
+</div>
+<button class="top" id="toTop" aria-label="맨 위로">↑</button>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('#tabs a'));
+  var secs=tabs.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  var top=document.getElementById('toTop'), nav=document.getElementById('tabs'), cur=-1;
+  function onScroll(){
+    var y=window.scrollY+80, k=0;
+    for(var i=0;i<secs.length;i++){ if(secs[i].offsetTop<=y) k=i; }
+    if(k!==cur){ cur=k; tabs.forEach(function(a,i){a.classList.toggle('on',i===k)});
+      var a=tabs[k]; nav.scrollTo({left:a.offsetLeft-nav.clientWidth/2+a.clientWidth/2,behavior:'smooth'}); }
+    top.classList.toggle('show',window.scrollY>600);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+})();
+</script>
+</body>
+</html>
