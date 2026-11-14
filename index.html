@@ -413,6 +413,14 @@
   .bx li.mli b{display:block}.mimg{display:block;width:100%;max-height:170px;object-fit:cover;border-radius:10px;margin:7px 0}
 
 /*MOTION-CSS*/
+:root{--e1:inset 0 1px 0 rgba(255,255,255,.85),0 1px 2px rgba(24,33,31,.06),0 6px 14px -8px rgba(24,33,31,.16),0 18px 30px -22px rgba(24,33,31,.22);
+--e2:inset 0 1px 0 rgba(255,255,255,.25),0 2px 4px rgba(24,33,31,.10),0 12px 24px -10px rgba(24,33,31,.30),0 28px 44px -26px rgba(24,33,31,.35)}
+.bring>div,.who,.fl,.flow,.bx,.day,.note,.cars li{box-shadow:var(--e1);border-color:rgba(24,33,31,.07)}
+.day.full{box-shadow:var(--e2);translate:0 -4px}
+.who .hd,.flow .fh{background-image:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,0) 70%)}
+.stats{box-shadow:0 14px 24px -18px rgba(0,0,0,.55);position:relative;z-index:1}
+#tabs a,.lab,#toTop,.wish a,.bx a{transition:transform .15s ease-out}
+#tabs a:active,.lab:active,#toTop:active,.wish a:active,.bx a:active{transform:scale(.96)}
 .rv-on .rv{opacity:0;transform:perspective(900px) translateY(30px) rotateX(11deg);transform-origin:50% 0;transition:opacity .7s ease-out,transform .9s cubic-bezier(.16,.84,.24,1)}
 .rv-on .rv.in{opacity:1;transform:none}
 .cover::before{transform-origin:50% 62%;animation:kb 16s cubic-bezier(.2,.6,.2,1) both;translate:0 var(--py,0px);will-change:transform}
