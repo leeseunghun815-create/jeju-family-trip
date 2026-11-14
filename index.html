@@ -413,22 +413,6 @@
   .bx li.mli b{display:block}.mimg{display:block;width:100%;max-height:170px;object-fit:cover;border-radius:10px;margin:7px 0}
 
 /*MOTION-CSS*/
-/* P1 타이포 체계 */
-:root{--serif:'Hahmlet','Noto Serif KR','Batang',serif;--latin:'Cormorant Garamond','Hahmlet',serif}
-.sec{gap:12px;padding-bottom:16px;margin-bottom:12px}
-.sec .no{display:flex;align-items:center;gap:10px;font-family:'Pretendard',sans-serif;font-style:normal;font-weight:600;font-size:10.5px;line-height:1;letter-spacing:.3em;text-transform:uppercase;color:var(--goldText)}
-.sec .no::before{content:"";flex:none;width:22px;height:1px;background:var(--gold)}
-.sec h2{font-family:var(--serif);font-weight:600;font-size:26px;line-height:1.25;letter-spacing:-.04em;color:var(--basalt)}
-section h3{font-family:var(--serif);font-weight:600;font-size:19px;line-height:1.4;letter-spacing:-.035em;color:var(--basalt)}
-.hint{font-size:13px;line-height:1.65;color:var(--sub)}
-.num,.tl time,.steps li>b,.fl .tm,.fl .dt,.pay b.num,.day .d,.day .p,.stats b,.leg,.bx li span,.dtab span{font-variant-numeric:lining-nums tabular-nums}
-.tl time{font-family:var(--serif);font-weight:600;font-size:15.5px;letter-spacing:-.02em}
-.steps li>b{font-family:var(--serif);font-weight:600;letter-spacing:-.02em}
-.fl .tm{font-family:var(--serif);font-weight:600;letter-spacing:-.03em}
-.pay b.num{font-family:var(--serif);font-weight:600;letter-spacing:-.02em}
-.tl b,.pay>div>b,.bx li b,.who .nm{font-weight:600}
-.wishhead h2{font-family:var(--serif);font-weight:600;letter-spacing:-.04em}
-.eyebrow2{font-family:'Pretendard',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.3em}
 .dtabs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:4px 0 12px;position:sticky;top:49px;z-index:5;padding:6px 0;background:linear-gradient(#fff 80%,rgba(255,255,255,0))}
 .dtab{display:flex;flex-direction:column;align-items:center;gap:1px;padding:9px 0 8px;min-height:52px;border-radius:12px;border:1px solid rgba(24,33,31,.1);background:#fff;color:var(--ink);font:inherit;cursor:pointer;box-shadow:var(--e1);transition:background .25s,color .25s,translate .25s}
 .dtab b{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;font-family:'Cormorant Garamond','Hahmlet',serif;font-style:italic;font-weight:600;font-size:16px;line-height:1.1}
@@ -639,6 +623,65 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--tang);outline-offse
 @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @keyframes fr{from{opacity:0;inset:26px}to{opacity:1;inset:12px}}
 @media (prefers-reduced-motion:reduce){.cover::before,.cover .t>*,.cover .frame{animation:none}.cover::before,.cover .t{translate:none}}
+/* P1 타이포 체계 */
+:root{--serif:'Hahmlet','Noto Serif KR','Batang',serif;--latin:'Cormorant Garamond','Hahmlet',serif}
+.sec{gap:12px;padding-bottom:16px;margin-bottom:12px}
+.sec .no{display:flex;align-items:center;gap:10px;font-family:'Pretendard',sans-serif;font-style:normal;font-weight:600;font-size:10.5px;line-height:1;letter-spacing:.3em;text-transform:uppercase;color:var(--goldText)}
+.sec .no::before{content:"";flex:none;width:22px;height:1px;background:var(--gold)}
+.sec h2{font-family:var(--serif);font-weight:600;font-size:26px;line-height:1.25;letter-spacing:-.04em;color:var(--basalt)}
+section h3{font-family:var(--serif);font-weight:600;font-size:19px;line-height:1.4;letter-spacing:-.035em;color:var(--basalt)}
+.hint{font-size:13px;line-height:1.65;color:var(--sub)}
+.num,.tl time,.steps li>b,.fl .tm,.fl .dt,.pay b.num,.day .d,.day .p,.stats b,.leg,.bx li span,.dtab span{font-variant-numeric:lining-nums tabular-nums}
+.tl time{font-family:var(--serif);font-weight:600;font-size:15.5px;letter-spacing:-.02em}
+.steps li>b{font-family:var(--serif);font-weight:600;letter-spacing:-.02em}
+.fl .tm{font-family:var(--serif);font-weight:600;letter-spacing:-.03em}
+.pay b.num{font-family:var(--serif);font-weight:600;letter-spacing:-.02em}
+.tl b,.pay>div>b,.bx li b,.who .nm{font-weight:600}
+.wishhead h2{font-family:var(--serif);font-weight:600;letter-spacing:-.04em}
+.eyebrow2{font-family:'Pretendard',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.3em}
+/* P2 색·면 정리 */
+:root{--ivory:#fbf9f4;--hair:#e7e1d5;--hair2:#efeae0;--shadow:none;--e1:none;--e2:0 10px 24px -16px rgba(24,33,31,.35)}
+body{background:#e9e5dc}
+.sec::after{background:var(--gold)}
+/* 카드: 흰 면 + 금빛 헤어라인, 그림자 없음 */
+.bring div,.who,.fl,.bx,.flow,.facts div,.cost,.paylist,details.seg,.howto,.wish,.map,.tl,.day,.note,.cars li{box-shadow:none;border-color:var(--hair)}
+.bring div{background:#fff}
+/* 색 머리띠 → 글자 머리 + 헤어라인 */
+.who .hd,.who.g1 .hd,.who.g2 .hd,.who.car .hd,.flow .fh,.flow.f1 .fh,.flow.f2 .fh,.fh{background:#fff;color:var(--basalt);border-bottom:1px solid var(--hair2);padding:14px 16px 12px}
+.who .hd b,.fh b{font-family:var(--serif);font-weight:600;font-size:16px;letter-spacing:-.03em}
+.who .hd span,.fh span{background:none;padding:0;border-radius:0;color:var(--goldText);font-size:12px;font-weight:500;opacity:1;letter-spacing:0}
+.who.g1 .span i,.who.g2 .span i{background:var(--basalt)}
+.who.car .span i{background:var(--gold)}
+.span{background:var(--hair2)}
+.steps li::before{border-color:var(--gold);border-width:1.5px}
+/* 날짜 타일 */
+.day.we .d,.day.we .w{color:var(--basalt)}
+.day .w{color:var(--sub)}
+.day.full .d{color:var(--goldSoft)}.day.full .w{color:rgba(233,220,195,.75)}
+.day.full{box-shadow:none;translate:none}
+/* 일정표 */
+.dtab{box-shadow:none;border-color:var(--hair)}
+.dtab[aria-selected="true"]{box-shadow:none;translate:none}
+.dsum{background:#fff;color:var(--basalt);border:1px solid var(--hair);border-bottom:1px solid var(--hair2);border-radius:14px 14px 0 0;padding:15px 16px 13px}
+.dsum b{font-family:var(--serif);font-weight:600;font-size:16.5px;letter-spacing:-.03em}
+.dsum span{color:var(--goldText);font-size:12px}
+.tl{border-color:var(--hair);border-radius:0 0 14px 14px}
+.tl .k,.k.fly,.k.car,.k.bed,.k.go,.k.fun{background:none;color:var(--sub);font-weight:500;font-size:11px;letter-spacing:.08em;border:1px solid var(--hair);border-radius:3px;padding:2px 0}
+.tl li{border-bottom-style:solid;border-bottom-color:var(--hair2)}
+/* 상태 배지 → 금색 글자 */
+.bxh i,.bxh i.ok{background:none;color:var(--goldText);font-weight:600;font-size:11.5px;letter-spacing:.06em;padding:0;border-radius:0}
+.bxh i.wait{background:none;color:var(--tangDeep);font-weight:600;font-size:11.5px;padding:0}
+.bxh{border-bottom-color:var(--hair2)}
+.bx li{border-bottom-color:var(--hair2)}
+/* 알림 상자 → 아이보리 면 + 금색 세로선 */
+.note{background:var(--ivory);border:0;border-left:1.5px solid var(--gold);border-radius:0}
+.note b{color:var(--basalt);font-family:var(--serif);font-weight:600}
+.tips div{background:var(--ivory);border-color:var(--hair);box-shadow:none}
+.wishhead,.closing{background:var(--ivory);border-color:var(--hair)}
+.bring svg{width:26px;height:26px}
+.bring svg [stroke]{stroke:var(--goldText);stroke-width:1.6}
+.bring svg [fill="#ef7d1a"]{fill:var(--goldSoft);opacity:.6}
+/*PREM-CSS*/
 </style>
 </head>
 <body>
