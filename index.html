@@ -413,6 +413,53 @@
   .bx li.mli b{display:block}.mimg{display:block;width:100%;max-height:170px;object-fit:cover;border-radius:10px;margin:7px 0}
 
 /*MOTION-CSS*/
+.dtabs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:4px 0 12px;position:sticky;top:49px;z-index:5;padding:6px 0;background:linear-gradient(#fff 80%,rgba(255,255,255,0))}
+.dtab{display:flex;flex-direction:column;align-items:center;gap:1px;padding:9px 0 8px;min-height:52px;border-radius:12px;border:1px solid rgba(24,33,31,.1);background:#fff;color:var(--ink);font:inherit;cursor:pointer;box-shadow:var(--e1);transition:background .25s,color .25s,translate .25s}
+.dtab b{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;font-family:'Cormorant Garamond','Hahmlet',serif;font-style:italic;font-weight:600;font-size:16px;line-height:1.1}
+.dtab span{font-size:12.5px;color:var(--sub)}
+.dtab[aria-selected="true"]{background:var(--basalt);color:#fff;border-color:var(--basalt);translate:0 -3px;box-shadow:var(--e2)}
+.dtab[aria-selected="true"] span{color:#f3d6a8}
+.dtab .now{display:block;font-size:10.5px;font-weight:800;color:var(--tang);letter-spacing:.05em}
+.dpane{display:none}
+.dpane.on{display:block;animation:paneIn .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes paneIn{from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}
+.dsum{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:14px 16px;border-radius:16px 16px 0 0;background:var(--basalt);color:#fff}
+.dsum b{font-size:16.5px}
+.dsum span{font-size:12.5px;color:#f3d6a8;white-space:nowrap}
+.tl{list-style:none;margin:0 0 6px;padding:8px 14px 4px;background:#fff;border:1px solid rgba(24,33,31,.08);border-top:0;border-radius:0 0 16px 16px;box-shadow:var(--e1)}
+.tl li{position:relative;display:grid;grid-template-columns:50px 44px 1fr;gap:8px;align-items:start;padding:11px 0;border-bottom:1px dashed rgba(24,33,31,.1)}
+.tl li:last-child{border-bottom:0}
+.tl time{font-weight:800;font-size:15px;font-variant-numeric:tabular-nums;color:var(--basalt);padding-top:1px}
+.tl .k{font-style:normal;font-size:11.5px;font-weight:800;text-align:center;padding:3px 0;border-radius:6px;margin-top:2px}
+.k.fly{background:#e4f1f4;color:#0d5566}.k.car{background:#f6ead9;color:#8a5317}.k.bed{background:#e8efe6;color:#3c6a3a}.k.go{background:#eceaf6;color:#4b3f8f}.k.fun{background:#fde9e0;color:#b04a1d}
+.tl b{display:block;font-size:15px;line-height:1.4}
+.tl li div span{display:block;font-size:13px;color:var(--sub);line-height:1.45;margin-top:2px}
+.dpane.on .tl li{animation:rise .5s cubic-bezier(.2,.7,.2,1) both}
+.dpane.on .tl li:nth-child(2){animation-delay:.06s}.dpane.on .tl li:nth-child(3){animation-delay:.12s}.dpane.on .tl li:nth-child(4){animation-delay:.18s}.dpane.on .tl li:nth-child(5){animation-delay:.24s}.dpane.on .tl li:nth-child(6){animation-delay:.3s}.dpane.on .tl li:nth-child(7){animation-delay:.36s}
+.tl li.done>*{opacity:.42}
+.tl li.next{background:linear-gradient(90deg,rgba(239,125,26,.10),rgba(239,125,26,0));margin:0 -14px;padding-left:14px;padding-right:14px}
+.tl li.next::before{content:"다음";position:absolute;right:10px;top:10px;font-size:11px;font-weight:800;color:#fff;background:var(--tang);padding:2px 7px;border-radius:999px;animation:ping 1.8s ease-out infinite}
+body{padding-bottom:calc(68px + env(safe-area-inset-bottom))}
+.top{bottom:calc(84px + env(safe-area-inset-bottom))}
+.dock{position:fixed;left:10px;right:10px;bottom:calc(8px + env(safe-area-inset-bottom));z-index:35;display:grid;grid-template-columns:repeat(5,1fr);padding:6px;border-radius:20px;background:rgba(24,33,31,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 14px 30px -12px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.08);translate:0 130%;transition:translate .45s cubic-bezier(.2,.7,.2,1)}
+.dock.show{translate:0 0}
+.dock a,.dock button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:50px;border-radius:14px;color:rgba(255,255,255,.78);text-decoration:none;font:inherit;font-size:11.5px;font-weight:600;background:none;border:0;cursor:pointer;transition:background .2s,color .2s}
+.dock svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round}
+.dock .on{color:#fff;background:rgba(243,180,108,.18)}
+.dock .on svg{stroke:#f3b46c}
+.dock a:active,.dock button:active{transform:scale(.94)}
+.sheet{position:fixed;inset:0;z-index:50;background:rgba(10,16,15,.45);display:flex;align-items:flex-end}
+.sheet[hidden]{display:none}
+.sheet-in{width:100%;max-width:520px;margin:0 auto;background:#fff;border-radius:22px 22px 0 0;padding:14px 18px calc(20px + env(safe-area-inset-bottom));animation:sheetUp .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes sheetUp{from{translate:0 100%}to{translate:0 0}}
+.sheet-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.sheet-h b{font-size:17px}
+.sheet-h button{min-height:44px;padding:0 6px;border:0;background:none;font:inherit;font-size:14px;color:var(--sub);cursor:pointer}
+.sheet-in a{display:flex;flex-direction:column;padding:13px 4px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.sheet-in a b{font-size:16px}
+.sheet-in a span{font-size:13px;color:var(--sub)}
+.sheet-in p{margin:12px 4px 0;font-size:13px;color:var(--sub)}
+@media (prefers-reduced-motion:reduce){.dpane.on,.dpane.on .tl li,.sheet-in,.tl li.next::before{animation:none}.dock{transition:none}}
 .who .row+.row{margin-top:14px;padding-top:14px;border-top:1px dashed rgba(24,33,31,.14)}
 .stage{position:relative;height:100vh;height:100svh;min-height:620px;max-height:900px;overflow:hidden;background:#0d1a1c;color:#fff;isolation:isolate}
 .st-photo{position:absolute;inset:-4% 0 -4% 0;background:url('img/cover.jpg') 40% 52%/cover;translate:0 var(--py,0px);clip-path:inset(50% 0 50% 0);animation:stOpen 1.5s .55s cubic-bezier(.7,0,.2,1) forwards,stZoom 9s .55s cubic-bezier(.2,.6,.2,1) both,breathe 22s 9.6s ease-in-out infinite alternate}
@@ -682,8 +729,73 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--tang);outline-offse
 </div>
 
 <nav class="tabs" id="tabs">
-  <a href="#ask">챙길 것</a><a href="#when">누가 언제</a><a href="#flight">비행기</a><a href="#stay">숙소</a><a href="#map">위치</a><a href="#book">예약 현황</a><a href="#apx2">렌터카</a><a href="#apx3">결제 내역</a><a href="#wish">기다리는 것</a><a href="#meal">식당</a>
+  <a href="#plan">일정</a><a href="#ask">챙길 것</a><a href="#when">누가 언제</a><a href="#flight">비행기</a><a href="#stay">숙소</a><a href="#map">위치</a><a href="#book">예약 현황</a><a href="#apx2">렌터카</a><a href="#apx3">결제 내역</a><a href="#wish">기다리는 것</a><a href="#meal">식당</a>
 </nav>
+
+<!-- 날짜별 일정 -->
+<section id="plan">
+  <div class="sec"><span class="no">PLAN</span><h2>날짜별 일정표</h2></div>
+  <p class="hint">날짜를 누르면 그날 일정이 나옵니다 · 여행 중에는 오늘이 먼저 열립니다</p>
+  <div class="dtabs" role="tablist" aria-label="날짜 고르기">
+    <button type="button" role="tab" class="dtab" data-d="0"><b>Day 1</b><span>27 금</span></button>
+    <button type="button" role="tab" class="dtab" data-d="1"><b>Day 2</b><span>28 토</span></button>
+    <button type="button" role="tab" class="dtab" data-d="2"><b>Day 3</b><span>29 일</span></button>
+    <button type="button" role="tab" class="dtab" data-d="3"><b>Day 4</b><span>30 월</span></button>
+    <button type="button" role="tab" class="dtab" data-d="4"><b>Day 5</b><span>1 화</span></button>
+  </div>
+  <div class="dpanes">
+    <div class="dpane" role="tabpanel" data-d="0">
+      <div class="dsum"><b>제주로 출발 · 애월 집 첫날밤</b><span>5명 · 숙소 1</span></div>
+      <ol class="tl">
+        <li data-t="2026-11-27T19:05:00+09:00"><time>19:05</time><i class="k go">공항</i><div><b>대구공항 도착</b><span>출발 1시간 전 · 신분증 꼭 챙기기</span></div></li>
+        <li data-t="2026-11-27T20:05:00+09:00"><time>20:05</time><i class="k fly">비행</i><div><b>트리니티 TW813 대구 출발</b><span>이미순 · 이수연 · 김태연 · 이승훈 · 이연정</span></div></li>
+        <li data-t="2026-11-27T21:10:00+09:00"><time>21:10</time><i class="k fly">비행</i><div><b>제주공항 도착</b><span>5번 게이트 → 렌트카종합안내센터 5구역 7번 셔틀</span></div></li>
+        <li data-t="2026-11-27T22:00:00+09:00"><time>22:00</time><i class="k car">차</i><div><b>1호차 그랜저 받기</b><span>뉴대한렌트카 · 이승훈 면허증 · 김태연 추가 운전자 등록</span></div></li>
+        <li data-t="2026-11-27T22:30:00+09:00"><time>22:30</time><i class="k bed">숙소</i><div><b>애월 바다 보이는 집 도착</b><span>제주시 애월읍 가문동상4길 43-1</span></div></li>
+      </ol>
+    </div>
+    <div class="dpane" role="tabpanel" data-d="1">
+      <div class="dsum"><b>뒤에 오는 4명 도착 · 다 모이는 날</b><span>저녁에 9명 · 숙소 1</span></div>
+      <ol class="tl">
+        <li data-t="2026-11-28T10:00:00+09:00"><time>낮</time><i class="k fun">자유</i><div><b>애월 · 협재 바다</b><span>숙소에서 서쪽으로 가까이 · 부록 4 참고</span></div></li>
+        <li data-t="2026-11-28T16:30:00+09:00"><time>16:30</time><i class="k car">차</i><div><b>이승훈 2호차 그랜저 받기</b><span>에이스렌트카 · 그동안 1호차는 김태연 운전</span></div></li>
+        <li data-t="2026-11-28T17:15:00+09:00"><time>17:15</time><i class="k fly">비행</i><div><b>아시아나 OZ8127 제주 도착</b><span>이소은 · 박순랑 · 시우 · 지우 · 공항에서 2호차로 태우기</span></div></li>
+        <li data-t="2026-11-28T17:45:00+09:00"><time>17:45</time><i class="k car">차</i><div><b>이소은 추가 운전자 등록</b><span>에이스렌트카 차고지 · 이소은 실물 면허증</span></div></li>
+        <li data-t="2026-11-28T18:30:00+09:00"><time>18:30</time><i class="k bed">숙소</i><div><b>숙소 도착 · 다 같이 저녁</b><span>바베큐 마당 무료</span></div></li>
+        <li data-t="2026-11-28T20:30:00+09:00"><time>20:30</time><i class="k car">차</i><div><b>이연정 공항으로</b><span>1호차로 바래다주기 · 약 25분</span></div></li>
+        <li data-t="2026-11-28T21:55:00+09:00"><time>21:55</time><i class="k fly">비행</i><div><b>이연정 트리니티 TW814 출발</b><span>23:00 대구 도착</span></div></li>
+      </ol>
+    </div>
+    <div class="dpane" role="tabpanel" data-d="2">
+      <div class="dsum"><b>숙소 이동 · 4명 먼저 귀가</b><span>밤에 4명 · 숙소 2</span></div>
+      <ol class="tl">
+        <li data-t="2026-11-29T11:00:00+09:00"><time>11:00</time><i class="k bed">숙소</i><div><b>숙소 1 체크아웃</b><span>여덟 식구 함께 다니기</span></div></li>
+        <li data-t="2026-11-29T15:00:00+09:00"><time>15:00</time><i class="k bed">숙소</i><div><b>신라스테이 플러스 이호테우 체크인</b><span>이소은 가족 · 이소은 이름으로</span></div></li>
+        <li data-t="2026-11-29T20:30:00+09:00"><time>20:30</time><i class="k car">차</i><div><b>1호차 반납</b><span>뉴대한렌트카 · 셔틀로 공항</span></div></li>
+        <li data-t="2026-11-29T20:55:00+09:00"><time>20:55</time><i class="k go">공항</i><div><b>공항 도착 · 탑승 수속</b><span>21:25 수속 마감</span></div></li>
+        <li data-t="2026-11-29T21:55:00+09:00"><time>21:55</time><i class="k fly">비행</i><div><b>트리니티 TW814 출발</b><span>이미순 · 이수연 · 김태연 · 이승훈 · 23:00 대구</span></div></li>
+      </ol>
+    </div>
+    <div class="dpane" role="tabpanel" data-d="3">
+      <div class="dsum"><b>시우 · 지우 감귤 따기</b><span>4명 · 숙소 2</span></div>
+      <ol class="tl">
+        <li data-t="2026-11-30T10:00:00+09:00"><time>10:00</time><i class="k car">차</i><div><b>숙소 2 출발</b><span>2호차 이소은 운전 · 약 25분</span></div></li>
+        <li data-t="2026-11-30T10:30:00+09:00"><time>10:30</time><i class="k fun">체험</i><div><b>감귤나무숲 귤 따기</b><span>제주시 도련남3길 81 · 아직 예약 전</span></div></li>
+        <li data-t="2026-11-30T12:00:00+09:00"><time>12:00</time><i class="k fun">체험</i><div><b>농장 쉬는 시간 전에 마치기</b><span>12:00~12:55 쉬는 시간</span></div></li>
+      </ol>
+    </div>
+    <div class="dpane" role="tabpanel" data-d="4">
+      <div class="dsum"><b>나중에 가는 4명 귀가</b><span>진에어 10:50</span></div>
+      <ol class="tl">
+        <li data-t="2026-12-01T09:00:00+09:00"><time>09:00</time><i class="k bed">숙소</i><div><b>숙소 2 체크아웃 후 출발</b><span>체크아웃 마감 11:00</span></div></li>
+        <li data-t="2026-12-01T09:30:00+09:00"><time>09:30</time><i class="k car">차</i><div><b>2호차 반납</b><span>에이스렌트카 · 이소은 운전 · 셔틀로 공항</span></div></li>
+        <li data-t="2026-12-01T09:50:00+09:00"><time>09:50</time><i class="k go">공항</i><div><b>공항 도착</b><span>10:20 탑승 수속 마감</span></div></li>
+        <li data-t="2026-12-01T10:50:00+09:00"><time>10:50</time><i class="k fly">비행</i><div><b>진에어 LJ7584 출발</b><span>이소은 · 박순랑 · 시우 · 지우 · 11:55 대구</span></div></li>
+      </ol>
+    </div>
+  </div>
+  <div class="div" aria-hidden="true"></div>
+</section>
 
 <!-- 챙길 것 -->
 <section id="ask">
@@ -989,6 +1101,23 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--tang);outline-offse
 <footer><svg aria-hidden="true"><use href="#hareubang"/></svg>제주 가족여행 안내 · 궁금한 점은 이승훈에게 연락 주세요</footer>
 </div>
 <button class="top" id="toTop" aria-label="맨 위로">↑</button>
+<nav class="dock" id="dock" aria-label="빠른 메뉴">
+  <a href="#plan"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>일정</span></a>
+  <a href="#flight"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.5v-2l-8-5V4a1.5 1.5 0 0 0-3 0v4.5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z"/></svg><span>비행기</span></a>
+  <a href="#stay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5V20H4z"/><path d="M10 20v-5h4v5"/></svg><span>숙소</span></a>
+  <a href="#map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg><span>지도</span></a>
+  <button type="button" id="callBtn" aria-expanded="false" aria-controls="callSheet"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5h2.8l1.4 4-2 1.5a12 12 0 0 0 6.2 6.2l1.5-2 4 1.4v2.8a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg><span>전화</span></button>
+</nav>
+<div class="sheet" id="callSheet" hidden>
+  <div class="sheet-in" role="dialog" aria-label="전화 모음">
+    <div class="sheet-h"><b>전화 모음</b><button type="button" id="callClose" aria-label="닫기">닫기</button></div>
+    <a href="tel:0647127811"><b>뉴대한렌트카</b><span>1호차 · 064-712-7811</span></a>
+    <a href="tel:0647227373"><b>에이스렌트카</b><span>2호차 · 064-722-7373</span></a>
+    <a href="tel:15440445"><b>제주패스</b><span>렌터카 예약 · 1544-0445 · 평일 09~18시</span></a>
+    <a href="tel:16441346"><b>NOL 고객센터</b><span>항공권 · 1644-1346 · 09~18시</span></a>
+    <p>가족 연락처는 가족 톡방에서 확인해 주세요</p>
+  </div>
+</div>
 <script>
 (function(){
   var tabs=[].slice.call(document.querySelectorAll('#tabs a'));
@@ -1067,6 +1196,27 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--tang);outline-offse
     D.textContent=d; put(p2(Math.floor(s/3600))+p2(Math.floor(s%3600/60))+p2(s%60));
     setTimeout(tick,1000-(now%1000)); }
   tick();
+})();
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.dtab')), panes=[].slice.call(document.querySelectorAll('.dpane'));
+  function pick(i,focus){ tabs.forEach(function(t,k){ t.setAttribute('aria-selected',k===i?'true':'false'); t.tabIndex=k===i?0:-1; });
+    panes.forEach(function(p,k){ p.classList.toggle('on',k===i); }); if(focus) tabs[i].focus(); }
+  tabs.forEach(function(t,i){ t.addEventListener('click',function(){pick(i)});
+    t.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'){pick((i+1)%tabs.length,true)} if(e.key==='ArrowLeft'){pick((i+tabs.length-1)%tabs.length,true)} }); });
+  var now=Date.now(), start=Date.UTC(2026,10,26,15,0), day=Math.floor((now-start)/86400000), first=0;
+  if(day>=0&&day<5){ first=day; var nt=document.createElement('i'); nt.className='now'; nt.textContent='오늘'; tabs[day].appendChild(nt); }
+  pick(first);
+  var marked=false; [].forEach.call(document.querySelectorAll('.tl li[data-t]'),function(li){ var t=Date.parse(li.getAttribute('data-t'));
+    if(t<now-10*60000) li.classList.add('done'); else if(!marked&&day>=0&&day<5){ li.classList.add('next'); marked=true; } });
+  var dock=document.getElementById('dock'), links=[].slice.call(dock.querySelectorAll('a')), secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))}), tk=false;
+  function paint(){ tk=false; dock.classList.toggle('show',scrollY>innerHeight*.6); var y=scrollY+innerHeight*.35, k=-1;
+    secs.forEach(function(s,i){ if(s&&s.offsetTop<=y) k=i; }); links.forEach(function(a,i){ a.classList.toggle('on',i===k); }); }
+  addEventListener('scroll',function(){ if(!tk){tk=true;requestAnimationFrame(paint);} },{passive:true}); paint();
+  var sh=document.getElementById('callSheet'), cb=document.getElementById('callBtn');
+  function openS(){ sh.hidden=false; cb.setAttribute('aria-expanded','true'); document.getElementById('callClose').focus(); }
+  function closeS(){ sh.hidden=true; cb.setAttribute('aria-expanded','false'); cb.focus(); }
+  cb.addEventListener('click',openS); document.getElementById('callClose').addEventListener('click',closeS);
+  sh.addEventListener('click',function(e){ if(e.target===sh) closeS(); }); addEventListener('keydown',function(e){ if(e.key==='Escape'&&!sh.hidden) closeS(); });
 })();
 /*MOTION-JS*/
 </script>
