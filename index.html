@@ -413,6 +413,16 @@
   .bx li.mli b{display:block}.mimg{display:block;width:100%;max-height:170px;object-fit:cover;border-radius:10px;margin:7px 0}
 
 /*MOTION-CSS*/
+.pay b.num{font-variant-numeric:tabular-nums}
+.wart use[href="#gyul"]{transform-box:fill-box;transform-origin:50% 8%;animation:sway 3.2s ease-in-out infinite alternate}
+.wart use[href="#gyul"]:nth-of-type(2n){animation-duration:3.9s;animation-delay:-1.3s}
+.wart use[href="#gyul"]:nth-of-type(3n){animation-duration:2.8s;animation-delay:-.6s}
+@keyframes sway{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}
+.wart path[stroke="#fff"]{animation:bob 3.6s ease-in-out infinite alternate}
+.wart path[stroke="#fff"]:nth-of-type(2n){animation-duration:4.4s;animation-delay:-1s}
+@keyframes bob{from{transform:translate(-6px,1px)}to{transform:translate(6px,-1px)}}
+.rv-on .wish:not(.in) *{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.wart use[href="#gyul"],.wart path[stroke="#fff"]{animation:none!important}}
 .rv-on .map .pin{opacity:0;translate:0 -24px;transition:opacity .3s ease-out,translate .75s cubic-bezier(.34,1.56,.64,1)}
 .rv-on .map.in .pin{opacity:1;translate:0 0}
 .map .pin.me i{animation:pinPing 2.4s 2s ease-out infinite}
@@ -946,6 +956,16 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--tang);outline-offse
 (function(){
   [].forEach.call(document.querySelectorAll('.map'),function(m){ [].forEach.call(m.querySelectorAll('.pin'),function(p,i){ p.style.transitionDelay=(.3+i*.2)+'s'; }); });
   [].forEach.call(document.querySelectorAll('.gal'),function(g){ [].forEach.call(g.querySelectorAll('figure'),function(f,i){ f.style.transitionDelay=Math.min(i,4)*.12+'s'; }); });
+})();
+(function(){
+  if((window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)||!('IntersectionObserver' in window)) return;
+  var nums=[].filter.call(document.querySelectorAll('.pay b.num'),function(b){return /^[0-9,]+원$/.test(b.textContent.trim())});
+  function run(b){ var to=parseInt(b.textContent.replace(/[^0-9]/g,''),10), big=b.closest('.tot'), dur=big?1600:900, t0=null;
+    function f(ts){ if(!t0) t0=ts; var k=Math.min(1,(ts-t0)/dur), e=1-Math.pow(1-k,3);
+      b.textContent=Math.round(to*e).toLocaleString('ko-KR')+'원'; if(k<1) requestAnimationFrame(f); }
+    requestAnimationFrame(f); }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(x){ if(x.isIntersecting){ io.unobserve(x.target); run(x.target); } }); },{threshold:.6});
+  nums.forEach(function(b){ io.observe(b); });
 })();
 /*MOTION-JS*/
 </script>
