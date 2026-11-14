@@ -413,6 +413,8 @@
   .bx li.mli b{display:block}.mimg{display:block;width:100%;max-height:170px;object-fit:cover;border-radius:10px;margin:7px 0}
 
 /*MOTION-CSS*/
+.rv-on .rv{opacity:0;transform:perspective(900px) translateY(30px) rotateX(11deg);transform-origin:50% 0;transition:opacity .7s ease-out,transform .9s cubic-bezier(.16,.84,.24,1)}
+.rv-on .rv.in{opacity:1;transform:none}
 .cover::before{transform-origin:50% 62%;animation:kb 16s cubic-bezier(.2,.6,.2,1) both;translate:0 var(--py,0px);will-change:transform}
 @keyframes kb{from{transform:scale(1.16)}to{transform:scale(1.02)}}
 .cover .t{translate:0 calc(var(--py,0px) * -.45);opacity:var(--fade,1)}
@@ -830,6 +832,19 @@
   function paint(){ ticking=false; var h=cv.offsetHeight, y=Math.min(window.scrollY,h);
     cv.style.setProperty('--py',(y*.38).toFixed(1)+'px'); cv.style.setProperty('--fade',(1-y/h*1.15).toFixed(3)); }
   window.addEventListener('scroll',function(){ if(!ticking){ticking=true;requestAnimationFrame(paint);} },{passive:true}); paint();
+})();
+(function(){
+  if((window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)||!('IntersectionObserver' in window)) return;
+  var sel='.sec,section h3,.bring>div,.stats>div,.days .day,.who,.fl,.note,.flow,.hero,.gal,.bx,.pay,.cars li,.tips>div,.wish,.carhd,.sum2';
+  var els=[].slice.call(document.querySelectorAll(sel));
+  els.forEach(function(e){e.classList.add('rv')});
+  els.forEach(function(e){ var sib=[].filter.call(e.parentNode.children,function(c){return c.classList.contains('rv')});
+    e.style.transitionDelay=(Math.min(sib.indexOf(e),5)*70)+'ms'; });
+  document.documentElement.classList.add('rv-on');
+  var io=new IntersectionObserver(function(es){ es.forEach(function(x){ if(x.isIntersecting||x.boundingClientRect.bottom<0){ x.target.classList.add('in'); io.unobserve(x.target); } }); },{rootMargin:'0px 0px -6% 0px',threshold:.06});
+  els.forEach(function(e){io.observe(e)});
+  var pend=false; window.addEventListener('scroll',function(){ if(pend) return; pend=true; requestAnimationFrame(function(){ pend=false;
+    els.forEach(function(e){ if(!e.classList.contains('in')&&e.getBoundingClientRect().bottom<0){ e.style.transitionDelay='0ms'; e.classList.add('in'); io.unobserve(e); } }); }); },{passive:true});
 })();
 /*MOTION-JS*/
 </script>
