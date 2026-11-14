@@ -411,6 +411,19 @@
   @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} .tabs a{transition:none} }
   .who .drv{font-size:13px;color:var(--goldText);font-weight:600;margin:-2px 0 6px}
   .bx li.mli b{display:block}.mimg{display:block;width:100%;max-height:170px;object-fit:cover;border-radius:10px;margin:7px 0}
+
+/*MOTION-CSS*/
+.cover::before{transform-origin:50% 62%;animation:kb 16s cubic-bezier(.2,.6,.2,1) both;translate:0 var(--py,0px);will-change:transform}
+@keyframes kb{from{transform:scale(1.16)}to{transform:scale(1.02)}}
+.cover .t{translate:0 calc(var(--py,0px) * -.45);opacity:var(--fade,1)}
+.cover .t>*{animation:rise .95s cubic-bezier(.2,.7,.2,1) both}
+.cover .t>*:nth-child(2){animation-delay:.14s}
+.cover .t>*:nth-child(3){animation-delay:.28s}
+.cover .t>*:nth-child(4){animation-delay:.46s}
+.cover .frame{animation:fr 1.4s .2s ease-out both}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes fr{from{opacity:0;inset:26px}to{opacity:1;inset:12px}}
+@media (prefers-reduced-motion:reduce){.cover::before,.cover .t>*,.cover .frame{animation:none}.cover::before,.cover .t{translate:none}}
 </style>
 </head>
 <body>
@@ -811,6 +824,14 @@
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
   top.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 })();
+(function(){
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var cv=document.getElementById('top'), ticking=false;
+  function paint(){ ticking=false; var h=cv.offsetHeight, y=Math.min(window.scrollY,h);
+    cv.style.setProperty('--py',(y*.38).toFixed(1)+'px'); cv.style.setProperty('--fade',(1-y/h*1.15).toFixed(3)); }
+  window.addEventListener('scroll',function(){ if(!ticking){ticking=true;requestAnimationFrame(paint);} },{passive:true}); paint();
+})();
+/*MOTION-JS*/
 </script>
 </body>
 </html>
