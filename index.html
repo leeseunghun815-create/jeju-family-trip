@@ -413,6 +413,25 @@
   .bx li.mli b{display:block}.mimg{display:block;width:100%;max-height:170px;object-fit:cover;border-radius:10px;margin:7px 0}
 
 /*MOTION-CSS*/
+.cover h1.typo{display:block;margin:4px 0 16px;font-size:0;line-height:1;letter-spacing:0;text-shadow:none;animation:none!important;filter:drop-shadow(0 3px 14px rgba(0,0,0,.35))}
+.typo .l1{display:flex;align-items:flex-end;perspective:600px;font-family:'Hahmlet','Noto Serif KR',serif;font-weight:800;font-size:66px;line-height:.98;letter-spacing:-3px;color:#fff}
+.typo .ch{display:inline-block;transform-origin:50% 100%;animation:flipUp .9s cubic-bezier(.2,.75,.25,1) both}
+.typo .ch:nth-child(1){animation-delay:.25s}.typo .ch:nth-child(2){animation-delay:.38s}.typo .ch:nth-child(3){animation-delay:.5s}
+.typo .cm{color:#f3b46c;margin-left:2px}
+@keyframes flipUp{from{opacity:0;transform:translateY(35%) rotateX(-85deg);filter:blur(4px)}to{opacity:1;transform:none;filter:none}}
+.typo .l2{display:flex;align-items:center;gap:12px;margin:10px 0 4px;font-family:'Pretendard',sans-serif;font-weight:300;font-size:22px;letter-spacing:.42em;color:rgba(255,255,255,.95)}
+.typo .l2 .w{animation:track 1.3s .6s cubic-bezier(.2,.7,.2,1) both}
+@keyframes track{from{opacity:0;letter-spacing:.05em}to{opacity:1;letter-spacing:.42em}}
+.typo .rule{flex:1;height:1px;background:linear-gradient(90deg,rgba(243,180,108,.95),rgba(243,180,108,0));transform-origin:0 50%;animation:rule 1.2s 1s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rule{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.typo .l3{display:flex;align-items:baseline;gap:2px;margin-top:-14px}
+.typo .n{font-family:'Cormorant Garamond','Hahmlet',serif;font-style:italic;font-weight:600;font-size:96px;line-height:.86;letter-spacing:-2px;color:#f3b46c;-webkit-text-stroke:1.4px #f3b46c;animation:inkIn 1.6s cubic-bezier(.3,.6,.2,1) both}
+.typo .n:nth-of-type(1){animation-delay:1.05s}.typo .n:nth-of-type(2){animation-delay:1.35s;margin-left:12px}
+@keyframes inkIn{0%{opacity:0;color:transparent;transform:translateY(14px) skewX(-6deg)}35%{opacity:1;color:transparent;transform:none}100%{opacity:1;color:#f3b46c;transform:none}}
+.typo .u{font-family:'Hahmlet','Noto Serif KR',serif;font-weight:700;font-size:26px;color:#fff;margin-left:4px;animation:rise .8s both}
+.typo .u:nth-of-type(1){animation-delay:1.3s}.typo .u:nth-of-type(2){animation-delay:1.6s}
+@media (max-width:360px){.typo .l1{font-size:56px}.typo .n{font-size:82px}.typo .l2{font-size:19px}}
+@media (prefers-reduced-motion:reduce){.typo .ch,.typo .l2 .w,.typo .rule,.typo .n,.typo .u{animation:none}}
 .pay b.num{font-variant-numeric:tabular-nums}
 .wart use[href="#gyul"]{transform-box:fill-box;transform-origin:50% 8%;animation:sway 3.2s ease-in-out infinite alternate}
 .wart use[href="#gyul"]:nth-of-type(2n){animation-duration:3.9s;animation-delay:-1.3s}
@@ -564,15 +583,15 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--tang);outline-offse
   <i class="frame" aria-hidden="true"></i>
   <i class="glint" aria-hidden="true"></i>
   <svg class="sky" viewBox="0 0 390 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <defs><mask id="trailMask"><path d="M430 58 C 330 26, 215 62, 135 125 S 40 205, -30 228" fill="none" stroke="#fff" stroke-width="6" pathLength="100" stroke-dasharray="100 100" stroke-dashoffset="100">
+    <defs><mask id="trailMask"><path d="M430 44 C 330 16, 220 40, 150 88 S 50 140, -30 152" fill="none" stroke="#fff" stroke-width="6" pathLength="100" stroke-dasharray="100 100" stroke-dashoffset="100">
       <animate id="trailDraw" attributeName="stroke-dashoffset" values="100;0" keyTimes="0;1" calcMode="spline" keySplines=".45 .05 .35 1" dur="6.5s" begin="1.4s;trailDraw.end+5s" fill="freeze"/>
     </path></mask></defs>
-    <g mask="url(#trailMask)"><path class="trail" d="M430 58 C 330 26, 215 62, 135 125 S 40 205, -30 228" fill="none" stroke="#fff" stroke-width="1.6" stroke-dasharray="5 7" stroke-linecap="round">
+    <g mask="url(#trailMask)"><path class="trail" d="M430 44 C 330 16, 220 40, 150 88 S 50 140, -30 152" fill="none" stroke="#fff" stroke-width="1.6" stroke-dasharray="5 7" stroke-linecap="round">
       <animate attributeName="opacity" values="0;.85;.85;0" keyTimes="0;.1;.75;1" dur="11.5s" begin="1.4s;trailDraw.end+5s"/>
     </path></g>
     <g class="plane" opacity="0">
       <path d="M-11 0 L-3 -2.2 L3 -9.5 L5.6 -9.5 L2.4 -2 L9 -1.7 L11.5 -4.5 L13.4 -4.5 L12 0 L13.4 4.5 L11.5 4.5 L9 1.7 L2.4 2 L5.6 9.5 L3 9.5 L-3 2.2 Z" transform="scale(-1,1)" fill="#fff"/>
-      <animateMotion path="M430 58 C 330 26, 215 62, 135 125 S 40 205, -30 228" rotate="auto" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 .05 .35 1" dur="6.5s" begin="1.4s;trailDraw.end+5s" fill="freeze"/>
+      <animateMotion path="M430 44 C 330 16, 220 40, 150 88 S 50 140, -30 152" rotate="auto" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 .05 .35 1" dur="6.5s" begin="1.4s;trailDraw.end+5s" fill="freeze"/>
       <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.08;.8;1" dur="6.5s" begin="1.4s;trailDraw.end+5s" fill="freeze"/>
       <animateTransform attributeName="transform" type="scale" additive="sum" values="1.25;1.25;.55" keyTimes="0;.35;1" dur="6.5s" begin="1.4s;trailDraw.end+5s" fill="freeze"/>
     </g>
@@ -582,7 +601,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--tang);outline-offse
   <div class="t">
     <span class="eyebrow">FAMILY TRIP · JEJU 2026</span>
     <div class="tagline">귤 익는 계절, 여덟 식구가 바다 앞에 모입니다</div>
-    <h1>제주, 우리 가족<br><em>4박 5일</em></h1>
+    <h1 class="typo" aria-label="제주, 우리 가족 4박 5일"><span class="l1" aria-hidden="true"><span class="ch">제</span><span class="ch">주</span><span class="ch cm">,</span></span><span class="l2" aria-hidden="true"><span class="w">우리 가족</span><i class="rule"></i></span><span class="l3" aria-hidden="true"><b class="n">4</b><span class="u">박</span><b class="n">5</b><span class="u">일</span></span></h1>
     <p>2026. 11. 27.(금) ~ 12. 1.(화)<br>애월 바다 보이는 집 · 신라스테이 이호테우</p>
     <div class="dday" id="dday"><i></i><span id="ddayLabel">출발까지</span><b id="ddayNum">11월 27일 20:05</b></div>
   </div>
