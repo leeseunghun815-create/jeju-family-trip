@@ -413,6 +413,18 @@
   .bx li.mli b{display:block}.mimg{display:block;width:100%;max-height:170px;object-fit:cover;border-radius:10px;margin:7px 0}
 
 /*MOTION-CSS*/
+.surf{position:absolute;left:0;right:0;bottom:-1px;height:150px;z-index:1;overflow:hidden;pointer-events:none}
+.surf .wv{position:absolute;left:0;bottom:0;width:200%;height:100%;will-change:transform}
+.surf .w1{fill:rgba(64,170,190,.38);animation:drift 10s linear infinite}
+.surf .w2{fill:rgba(10,72,86,.55);height:78%;animation:drift 7s linear infinite reverse}
+.surf .w3{fill:rgb(24,33,31);height:34%;animation:drift 13s linear infinite}
+.surf .crash{position:absolute;left:0;right:0;bottom:0;height:70%;animation:crash 6.5s cubic-bezier(.45,.05,.35,1) infinite}
+.surf .foam{fill:rgba(255,255,255,.34);stroke:#fff;stroke-width:3.2;vector-effect:non-scaling-stroke;animation:drift 5s linear infinite reverse;filter:drop-shadow(0 0 3px rgba(255,255,255,.7))}
+.surf .sp{position:absolute;top:18%;width:7px;height:7px;border-radius:50%;background:#fff;opacity:0;box-shadow:9px 6px 0 -1px #fff,-8px 9px 0 -1.5px rgba(255,255,255,.8);animation:spray 6.5s ease-out infinite}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes crash{0%{transform:translateY(70px) scaleY(.7);opacity:0}36%{transform:translateY(8px) scaleY(1);opacity:1}48%{transform:translateY(-26px) scaleY(1.12);opacity:1}60%{transform:translateY(0) scaleY(.95);opacity:.9}100%{transform:translateY(70px) scaleY(.7);opacity:0}}
+@keyframes spray{0%,42%{opacity:0;transform:translate(0,0) scale(.6)}50%{opacity:1;transform:translate(4px,-28px) scale(1.1)}70%{opacity:0;transform:translate(10px,-52px) scale(.4)}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.surf .wv,.surf .crash,.surf .sp{animation:none}.surf .crash{opacity:.6;transform:translateY(14px)}}
 .cover h1.typo{display:block;margin:4px 0 16px;font-size:0;line-height:1;letter-spacing:0;text-shadow:none;animation:none!important;filter:drop-shadow(0 3px 14px rgba(0,0,0,.35))}
 .typo .l1{display:flex;align-items:flex-end;perspective:600px;font-family:'Hahmlet','Noto Serif KR',serif;font-weight:800;font-size:66px;line-height:.98;letter-spacing:-3px;color:#fff}
 .typo .ch{display:inline-block;transform-origin:50% 100%;animation:flipUp .9s cubic-bezier(.2,.75,.25,1) both}
@@ -582,6 +594,15 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--tang);outline-offse
 <header class="cover" id="top">
   <i class="frame" aria-hidden="true"></i>
   <i class="glint" aria-hidden="true"></i>
+  <div class="surf" aria-hidden="true">
+    <svg class="wv w1" viewBox="0 0 780 90" preserveAspectRatio="none"><path d="M0 36 Q48.75 6 97.5 36 T195 36 T292.5 36 T390 36 T487.5 36 T585 36 T682.5 36 T780 36 V90 H0 Z"/></svg>
+    <svg class="wv w2" viewBox="0 0 780 90" preserveAspectRatio="none"><path d="M0 48 Q65 18 130 48 T260 48 T390 48 T520 48 T650 48 T780 48 V90 H0 Z"/></svg>
+    <div class="crash">
+      <svg class="wv foam" viewBox="0 0 780 90" preserveAspectRatio="none"><path d="M0 40 Q39 14 78 40 T156 40 T234 40 T312 40 T390 40 T468 40 T546 40 T624 40 T702 40 T780 40 V90 H0 Z"/></svg>
+      <i class="sp" style="left:12%"></i><i class="sp" style="left:27%;animation-delay:.12s"></i><i class="sp" style="left:44%;animation-delay:.05s"></i><i class="sp" style="left:61%;animation-delay:.18s"></i><i class="sp" style="left:78%;animation-delay:.09s"></i><i class="sp" style="left:91%;animation-delay:.2s"></i>
+    </div>
+    <svg class="wv w3" viewBox="0 0 780 90" preserveAspectRatio="none"><path d="M0 62 Q97.5 48 195 62 T390 62 T585 62 T780 62 V90 H0 Z"/></svg>
+  </div>
   <svg class="sky" viewBox="0 0 390 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <defs><mask id="trailMask"><path d="M430 44 C 330 16, 220 40, 150 88 S 50 140, -30 152" fill="none" stroke="#fff" stroke-width="6" pathLength="100" stroke-dasharray="100 100" stroke-dashoffset="100">
       <animate id="trailDraw" attributeName="stroke-dashoffset" values="100;0" keyTimes="0;1" calcMode="spline" keySplines=".45 .05 .35 1" dur="6.5s" begin="1.4s;trailDraw.end+5s" fill="freeze"/>
