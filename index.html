@@ -681,6 +681,33 @@ body{background:#e9e5dc}
 .bring svg{width:26px;height:26px}
 .bring svg [stroke]{stroke:var(--goldText);stroke-width:1.6}
 .bring svg [fill="#ef7d1a"]{fill:var(--goldSoft);opacity:.6}
+/* P3 탑승권 */
+.fl.bp{display:block;padding:0;margin:0 0 12px;border:1px solid var(--hair);border-radius:16px;background:#fff;position:relative;overflow:visible}
+.bp-top{display:flex;justify-content:space-between;align-items:baseline;padding:14px 18px 0}
+.bp .dt{font-family:var(--serif);font-weight:600;font-size:14.5px;color:var(--basalt);letter-spacing:-.02em}
+.bp-al{font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--goldText)}
+.bp-route{display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:10px;padding:10px 18px 16px}
+.bp-pt{display:flex;flex-direction:column;line-height:1.1}
+.bp-pt.to{text-align:right;align-items:flex-end}
+.bp-pt small{font-size:10.5px;font-weight:600;letter-spacing:.24em;color:var(--sub);margin-bottom:6px}
+.bp-pt b{font-family:var(--serif);font-weight:600;font-size:15px;color:var(--basalt);letter-spacing:-.02em;margin-bottom:4px}
+.bp .bp-pt .tm{font-family:var(--serif);font-weight:500;font-size:31px;line-height:1;letter-spacing:-.04em;color:var(--basalt)}
+.bp .bp-pt.to .tm{color:#4a524f}
+.bp-mid{position:relative;height:20px;margin-bottom:6px}
+.bp-line{position:absolute;left:0;right:0;top:50%;border-top:1px dashed var(--gold);opacity:.7}
+.bp-plane{position:absolute;top:50%;left:50%;width:20px;height:20px;margin:-10px 0 0 -10px;background:#fff;display:grid;place-items:center}
+.bp-plane svg{width:16px;height:16px;fill:var(--goldText);transform:rotate(90deg)}
+.bp-cut{display:block;position:relative;height:0;margin:0 14px;border-top:1px dashed var(--hair)}
+.bp-cut::before,.bp-cut::after{content:"";position:absolute;top:-9px;width:16px;height:16px;border-radius:50%;background:#fff;border:1px solid transparent;transform:rotate(45deg)}
+.bp-cut::before{left:-23px;border-top-color:var(--hair);border-right-color:var(--hair)}
+.bp-cut::after{right:-23px;border-bottom-color:var(--hair);border-left-color:var(--hair)}
+.bp .ppl{border:0;margin:0;padding:13px 18px 2px;font-size:14px;font-weight:500;color:var(--ink)}
+.bp .bk{background:none;color:var(--goldText);font-size:12px;font-weight:500;letter-spacing:.01em;padding:0 18px 14px;margin:0;border-radius:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.rv-on .bp .bp-plane{translate:-46px 0;opacity:0;transition:translate 1.1s .35s cubic-bezier(.2,.7,.2,1),opacity .5s .35s}
+.rv-on .bp.in .bp-plane{translate:0 0;opacity:1}
+@media (prefers-reduced-motion:reduce){.rv-on .bp .bp-plane{translate:none;opacity:1;transition:none}}
+@media (max-width:360px){.bp .bp-pt .tm{font-size:27px}.bp-route{padding-left:16px;padding-right:16px}}
 /*PREM-CSS*/
 </style>
 </head>
@@ -937,12 +964,12 @@ body{background:#e9e5dc}
 <section id="flight">
   <div class="sec"><span class="no">02</span><h2>비행기</h2></div>
   <p class="hint">6편 모두 발권 완료 · 예약번호는 가족 톡방 문자 참고</p>
-  <div class="fl"><span class="dt">11. 27.(금)</span><span class="rt">대구<i>→</i>제주</span><span class="tm num">20:05 <small>→ 21:10</small></span><span class="al tw">트리니티</span><div class="ppl">이미순 · 이수연 · 김태연 · 이승훈</div><div class="bk">✔ 발권 완료 · TW813 · 할인석 · 짐 15kg · 어른 4</div></div>
-  <div class="fl"><span class="dt">11. 27.(금)</span><span class="rt">대구<i>→</i>제주</span><span class="tm num">20:05 <small>→ 21:10</small></span><span class="al tw">트리니티</span><div class="ppl">이연정 (같은 비행기 · 예약은 따로)</div><div class="bk">✔ 발권 완료 · TW813 · 할인석 · 짐 15kg · 어른 1</div></div>
-  <div class="fl"><span class="dt">11. 28.(토)</span><span class="rt">대구<i>→</i>제주</span><span class="tm num">16:10 <small>→ 17:15</small></span><span class="al oz">아시아나</span><div class="ppl">이소은 · 박순랑 · 시우 · 지우</div><div class="bk">✔ 발권 완료 · OZ8127 · 할인석 · 짐 20kg · 어른 2 · 소아 2</div></div>
-  <div class="fl"><span class="dt">11. 28.(토)</span><span class="rt">제주<i>→</i>대구</span><span class="tm num">21:55 <small>→ 23:00</small></span><span class="al tw">트리니티</span><div class="ppl">이연정</div><div class="bk">✔ 발권 완료 · TW814 · 할인석 · 어른 1</div></div>
-  <div class="fl"><span class="dt">11. 29.(일)</span><span class="rt">제주<i>→</i>대구</span><span class="tm num">21:55 <small>→ 23:00</small></span><span class="al tw">트리니티</span><div class="ppl">이미순 · 이수연 · 김태연 · 이승훈</div><div class="bk">✔ 발권 완료 · TW814 · 일반석 · 짐 20kg · 어른 4</div></div>
-  <div class="fl"><span class="dt">12. 1.(화)</span><span class="rt">제주<i>→</i>대구</span><span class="tm num">10:50 <small>→ 11:55</small></span><span class="al" style="background:#e4ecf8;color:#1d3f8a">진에어</span><div class="ppl">이소은 · 박순랑 · 시우 · 지우</div><div class="bk">✔ 발권 완료 · LJ7584 · 할인석 · 짐 15kg · 어른 2 · 소아 2</div></div>
+  <div class="fl bp"><div class="bp-top"><span class="dt">11. 27.(금)</span><span class="bp-al tw">트리니티</span></div><div class="bp-route"><div class="bp-pt"><small aria-hidden="true">TAE</small><b>대구</b><span class="tm num">20:05</span></div><div class="bp-mid" aria-hidden="true"><i class="bp-line"></i><i class="bp-plane"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.5v-2l-8-5V4a1.5 1.5 0 0 0-3 0v4.5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z"/></svg></i></div><div class="bp-pt to"><small aria-hidden="true">CJU</small><b>제주</b><span class="tm num"><span class="sr">→ </span>21:10</span></div></div><i class="bp-cut" aria-hidden="true"></i><div class="ppl">이미순 · 이수연 · 김태연 · 이승훈</div><div class="bk">✔ 발권 완료 · TW813 · 할인석 · 짐 15kg · 어른 4</div></div>
+  <div class="fl bp"><div class="bp-top"><span class="dt">11. 27.(금)</span><span class="bp-al tw">트리니티</span></div><div class="bp-route"><div class="bp-pt"><small aria-hidden="true">TAE</small><b>대구</b><span class="tm num">20:05</span></div><div class="bp-mid" aria-hidden="true"><i class="bp-line"></i><i class="bp-plane"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.5v-2l-8-5V4a1.5 1.5 0 0 0-3 0v4.5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z"/></svg></i></div><div class="bp-pt to"><small aria-hidden="true">CJU</small><b>제주</b><span class="tm num"><span class="sr">→ </span>21:10</span></div></div><i class="bp-cut" aria-hidden="true"></i><div class="ppl">이연정 (같은 비행기 · 예약은 따로)</div><div class="bk">✔ 발권 완료 · TW813 · 할인석 · 짐 15kg · 어른 1</div></div>
+  <div class="fl bp"><div class="bp-top"><span class="dt">11. 28.(토)</span><span class="bp-al oz">아시아나</span></div><div class="bp-route"><div class="bp-pt"><small aria-hidden="true">TAE</small><b>대구</b><span class="tm num">16:10</span></div><div class="bp-mid" aria-hidden="true"><i class="bp-line"></i><i class="bp-plane"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.5v-2l-8-5V4a1.5 1.5 0 0 0-3 0v4.5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z"/></svg></i></div><div class="bp-pt to"><small aria-hidden="true">CJU</small><b>제주</b><span class="tm num"><span class="sr">→ </span>17:15</span></div></div><i class="bp-cut" aria-hidden="true"></i><div class="ppl">이소은 · 박순랑 · 시우 · 지우</div><div class="bk">✔ 발권 완료 · OZ8127 · 할인석 · 짐 20kg · 어른 2 · 소아 2</div></div>
+  <div class="fl bp"><div class="bp-top"><span class="dt">11. 28.(토)</span><span class="bp-al tw">트리니티</span></div><div class="bp-route"><div class="bp-pt"><small aria-hidden="true">CJU</small><b>제주</b><span class="tm num">21:55</span></div><div class="bp-mid" aria-hidden="true"><i class="bp-line"></i><i class="bp-plane"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.5v-2l-8-5V4a1.5 1.5 0 0 0-3 0v4.5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z"/></svg></i></div><div class="bp-pt to"><small aria-hidden="true">TAE</small><b>대구</b><span class="tm num"><span class="sr">→ </span>23:00</span></div></div><i class="bp-cut" aria-hidden="true"></i><div class="ppl">이연정</div><div class="bk">✔ 발권 완료 · TW814 · 할인석 · 어른 1</div></div>
+  <div class="fl bp"><div class="bp-top"><span class="dt">11. 29.(일)</span><span class="bp-al tw">트리니티</span></div><div class="bp-route"><div class="bp-pt"><small aria-hidden="true">CJU</small><b>제주</b><span class="tm num">21:55</span></div><div class="bp-mid" aria-hidden="true"><i class="bp-line"></i><i class="bp-plane"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.5v-2l-8-5V4a1.5 1.5 0 0 0-3 0v4.5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z"/></svg></i></div><div class="bp-pt to"><small aria-hidden="true">TAE</small><b>대구</b><span class="tm num"><span class="sr">→ </span>23:00</span></div></div><i class="bp-cut" aria-hidden="true"></i><div class="ppl">이미순 · 이수연 · 김태연 · 이승훈</div><div class="bk">✔ 발권 완료 · TW814 · 일반석 · 짐 20kg · 어른 4</div></div>
+  <div class="fl bp"><div class="bp-top"><span class="dt">12. 1.(화)</span><span class="bp-al ">진에어</span></div><div class="bp-route"><div class="bp-pt"><small aria-hidden="true">CJU</small><b>제주</b><span class="tm num">10:50</span></div><div class="bp-mid" aria-hidden="true"><i class="bp-line"></i><i class="bp-plane"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.5v-2l-8-5V4a1.5 1.5 0 0 0-3 0v4.5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z"/></svg></i></div><div class="bp-pt to"><small aria-hidden="true">TAE</small><b>대구</b><span class="tm num"><span class="sr">→ </span>11:55</span></div></div><i class="bp-cut" aria-hidden="true"></i><div class="ppl">이소은 · 박순랑 · 시우 · 지우</div><div class="bk">✔ 발권 완료 · LJ7584 · 할인석 · 짐 15kg · 어른 2 · 소아 2</div></div>
 
   <div class="note"><b>공항에서 탑승권 받기</b><span>출발 1시간 전까지 공항에 오세요. 탑승 수속은 출발 30분 전에 마감합니다. ① 항공사 카운터: 신분증을 내고 이름을 말하면 됩니다. 아이는 등본이나 건강보험증을 함께 냅니다. ② 무인 발권기(키오스크): 문자로 받은 예약번호를 넣으면 일행 모두의 탑승권이 한 번에 나옵니다. ③ 미리 하려면 항공사 앱·홈페이지 모바일 체크인에서 예약번호와 대표 탑승객 이름으로 조회합니다. 짐을 부칠 분은 카운터나 수하물 위탁 창구로 가세요.</span></div>
   <h3>도착하는 날 흐름</h3>
