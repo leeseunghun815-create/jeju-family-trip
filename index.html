@@ -413,6 +413,17 @@
   .bx li.mli b{display:block}.mimg{display:block;width:100%;max-height:170px;object-fit:cover;border-radius:10px;margin:7px 0}
 
 /*MOTION-CSS*/
+.rv-on .map .pin{opacity:0;translate:0 -24px;transition:opacity .3s ease-out,translate .75s cubic-bezier(.34,1.56,.64,1)}
+.rv-on .map.in .pin{opacity:1;translate:0 0}
+.map .pin.me i{animation:pinPing 2.4s 2s ease-out infinite}
+@keyframes pinPing{0%{box-shadow:0 0 0 0 rgba(239,125,26,.55)}70%,100%{box-shadow:0 0 0 12px rgba(239,125,26,0)}}
+.mroute line{animation:march 1.1s linear infinite}
+@keyframes march{from{stroke-dashoffset:14}to{stroke-dashoffset:0}}
+.rv-on .mroute{opacity:0;transition:opacity .7s 1.1s}
+.rv-on .map.in .mroute{opacity:1}
+.rv-on .gal figure{opacity:0;translate:48px 0;transition:opacity .6s ease-out,translate .8s cubic-bezier(.16,.84,.24,1)}
+.rv-on .gal.in figure{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.map .pin.me i,.mroute line{animation:none}}
 .prog{position:fixed;left:0;top:0;height:3px;width:100%;z-index:40;pointer-events:none;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--tang),#f3b46c)}
 .rv-on .sec::after{width:0;transition:width .9s .3s cubic-bezier(.2,.7,.2,1)}
 .rv-on .sec.in::after{width:44px}
@@ -904,7 +915,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--tang);outline-offse
 })();
 (function(){
   if((window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)||!('IntersectionObserver' in window)) return;
-  var sel='.sec,section h3,.bring>div,.stats>div,.days .day,.who,.fl,.note,.flow,.hero,.gal,.bx,.pay,.cars li,.tips>div,.wish,.carhd,.sum2';
+  var sel='.sec,section h3,.bring>div,.stats>div,.days .day,.who,.fl,.note,.flow,.hero,.gal,.map,.bx,.pay,.cars li,.tips>div,.wish,.carhd,.sum2';
   var els=[].slice.call(document.querySelectorAll(sel));
   els.forEach(function(e){e.classList.add('rv')});
   els.forEach(function(e){ var sib=[].filter.call(e.parentNode.children,function(c){return c.classList.contains('rv')});
@@ -931,6 +942,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--tang);outline-offse
   var bar=document.createElement('i'); bar.className='prog'; bar.setAttribute('aria-hidden','true'); document.body.appendChild(bar);
   var t=false; function paint(){ t=false; var h=document.documentElement.scrollHeight-innerHeight; bar.style.transform='scaleX('+(h>0?Math.min(1,scrollY/h):0).toFixed(4)+')'; }
   addEventListener('scroll',function(){ if(!t){t=true;requestAnimationFrame(paint);} },{passive:true}); addEventListener('resize',paint); paint();
+})();
+(function(){
+  [].forEach.call(document.querySelectorAll('.map'),function(m){ [].forEach.call(m.querySelectorAll('.pin'),function(p,i){ p.style.transitionDelay=(.3+i*.2)+'s'; }); });
+  [].forEach.call(document.querySelectorAll('.gal'),function(g){ [].forEach.call(g.querySelectorAll('figure'),function(f,i){ f.style.transitionDelay=Math.min(i,4)*.12+'s'; }); });
 })();
 /*MOTION-JS*/
 </script>
