@@ -413,6 +413,18 @@
   .bx li.mli b{display:block}.mimg{display:block;width:100%;max-height:170px;object-fit:cover;border-radius:10px;margin:7px 0}
 
 /*MOTION-CSS*/
+.prog{position:fixed;left:0;top:0;height:3px;width:100%;z-index:40;pointer-events:none;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--tang),#f3b46c)}
+.rv-on .sec::after{width:0;transition:width .9s .3s cubic-bezier(.2,.7,.2,1)}
+.rv-on .sec.in::after{width:44px}
+.steps li:nth-child(1){--d:.25s}.steps li:nth-child(2){--d:.5s}.steps li:nth-child(3){--d:.75s}.steps li:nth-child(4){--d:1s}.steps li:nth-child(5){--d:1.25s}.steps li:nth-child(6){--d:1.5s}
+.rv-on .flow .steps li::before{transform:scale(0);transition:transform .45s var(--d,0s) cubic-bezier(.34,1.56,.64,1)}
+.rv-on .flow .steps li::after{transform:scaleY(0);transform-origin:50% 0;transition:transform .45s calc(var(--d,0s) + .2s) ease-out}
+.rv-on .flow .steps li>*{opacity:0;translate:-10px 0;transition:opacity .5s calc(var(--d,0s) + .05s) ease-out,translate .5s calc(var(--d,0s) + .05s) ease-out}
+.rv-on .flow.in .steps li::before,.rv-on .flow.in .steps li::after{transform:none}
+.rv-on .flow.in .steps li>*{opacity:1;translate:0 0}
+.rv-on .day.full.in{animation:gather 1.5s .9s ease-out 3}
+@keyframes gather{0%{box-shadow:var(--e2),0 0 0 0 rgba(239,125,26,.6)}100%{box-shadow:var(--e2),0 0 0 14px rgba(239,125,26,0)}}
+@media (prefers-reduced-motion:reduce){.rv-on .day.full.in{animation:none}}
 .cover .sky{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;overflow:visible}
 .cover .sky .trail{filter:drop-shadow(0 0 2px rgba(255,255,255,.6))}
 .cover .glint{position:absolute;left:-60%;top:38%;width:60%;height:28%;z-index:1;pointer-events:none;
@@ -914,6 +926,11 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--tang);outline-offse
     num.textContent=d+'일 '+p2(Math.floor(s/3600))+':'+p2(Math.floor(s%3600/60))+':'+p2(s%60);
     setTimeout(tick,1000-(now%1000)); }
   tick();
+})();
+(function(){
+  var bar=document.createElement('i'); bar.className='prog'; bar.setAttribute('aria-hidden','true'); document.body.appendChild(bar);
+  var t=false; function paint(){ t=false; var h=document.documentElement.scrollHeight-innerHeight; bar.style.transform='scaleX('+(h>0?Math.min(1,scrollY/h):0).toFixed(4)+')'; }
+  addEventListener('scroll',function(){ if(!t){t=true;requestAnimationFrame(paint);} },{passive:true}); addEventListener('resize',paint); paint();
 })();
 /*MOTION-JS*/
 </script>
