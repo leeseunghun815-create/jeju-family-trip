@@ -413,6 +413,22 @@
   .bx li.mli b{display:block}.mimg{display:block;width:100%;max-height:170px;object-fit:cover;border-radius:10px;margin:7px 0}
 
 /*MOTION-CSS*/
+/* P1 타이포 체계 */
+:root{--serif:'Hahmlet','Noto Serif KR','Batang',serif;--latin:'Cormorant Garamond','Hahmlet',serif}
+.sec{gap:12px;padding-bottom:16px;margin-bottom:12px}
+.sec .no{display:flex;align-items:center;gap:10px;font-family:'Pretendard',sans-serif;font-style:normal;font-weight:600;font-size:10.5px;line-height:1;letter-spacing:.3em;text-transform:uppercase;color:var(--goldText)}
+.sec .no::before{content:"";flex:none;width:22px;height:1px;background:var(--gold)}
+.sec h2{font-family:var(--serif);font-weight:600;font-size:26px;line-height:1.25;letter-spacing:-.04em;color:var(--basalt)}
+section h3{font-family:var(--serif);font-weight:600;font-size:19px;line-height:1.4;letter-spacing:-.035em;color:var(--basalt)}
+.hint{font-size:13px;line-height:1.65;color:var(--sub)}
+.num,.tl time,.steps li>b,.fl .tm,.fl .dt,.pay b.num,.day .d,.day .p,.stats b,.leg,.bx li span,.dtab span{font-variant-numeric:lining-nums tabular-nums}
+.tl time{font-family:var(--serif);font-weight:600;font-size:15.5px;letter-spacing:-.02em}
+.steps li>b{font-family:var(--serif);font-weight:600;letter-spacing:-.02em}
+.fl .tm{font-family:var(--serif);font-weight:600;letter-spacing:-.03em}
+.pay b.num{font-family:var(--serif);font-weight:600;letter-spacing:-.02em}
+.tl b,.pay>div>b,.bx li b,.who .nm{font-weight:600}
+.wishhead h2{font-family:var(--serif);font-weight:600;letter-spacing:-.04em}
+.eyebrow2{font-family:'Pretendard',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.3em}
 .dtabs{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:4px 0 12px;position:sticky;top:49px;z-index:5;padding:6px 0;background:linear-gradient(#fff 80%,rgba(255,255,255,0))}
 .dtab{display:flex;flex-direction:column;align-items:center;gap:1px;padding:9px 0 8px;min-height:52px;border-radius:12px;border:1px solid rgba(24,33,31,.1);background:#fff;color:var(--ink);font:inherit;cursor:pointer;box-shadow:var(--e1);transition:background .25s,color .25s,translate .25s}
 .dtab b{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1;font-family:'Cormorant Garamond','Hahmlet',serif;font-style:italic;font-weight:600;font-size:16px;line-height:1.1}
