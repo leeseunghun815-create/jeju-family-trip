@@ -757,6 +757,12 @@ body{background:#e9e5dc}
 .wtx b{font-family:var(--serif);font-weight:600;letter-spacing:-.03em}
 .together{background:var(--ivory);border:1px solid var(--hair);border-radius:8px}
 .dock{grid-template-columns:repeat(6,1fr)}
+/* 11-25 체크인 묶음 */
+.dock{grid-template-columns:repeat(7,1fr)}
+.dock a,.dock button{font-size:10.5px}
+.st-ck{display:inline-block;margin:0 0 10px;padding:9px 16px;border-radius:22px;background:rgba(255,255,255,.92);color:#18211f;font-size:14px;font-weight:700;text-decoration:none}
+#checkin .bx li{grid-template-columns:96px 1fr}
+#checkin .bx a{color:var(--sea2);font-weight:700}
 /*PREM-CSS*/
 </style>
 </head>
@@ -853,6 +859,7 @@ body{background:#e9e5dc}
     <p class="st-tag">귤 익는 계절, 여덟 식구가 바다 앞에 모입니다</p>
     <h1 class="typo" aria-label="제주, 우리 가족 4박 5일"><span class="l1" aria-hidden="true"><span class="ch">제</span><span class="ch">주</span><span class="ch cm">,</span></span><span class="l2" aria-hidden="true"><span class="w">우리 가족</span><i class="rule"></i></span><span class="l3" aria-hidden="true"><b class="n">4</b><span class="u">박</span><b class="n">5</b><span class="u">일</span></span></h1>
     <div class="st-count" id="stCount" aria-live="off"><span class="st-lab" id="stLab">출발까지</span><span class="st-d"><em>D-</em><b id="stD">13</b></span><span class="st-clock" id="stClock"><b>0</b><b>0</b><s>:</s><b>0</b><b>0</b><s>:</s><b>0</b><b>0</b></span></div>
+    <a class="st-ck" href="#checkin">체크인 · 예약번호 바로 보기 →</a>
     <p class="st-when">2026. 11. 27.(금) ~ 12. 1.(화)<br>애월 바다 보이는 집 · 신라스테이 이호테우</p>
   </div>
   <a class="st-cue" href="#ask" aria-label="아래로 내려 보기"><span>아래로</span><i></i></a>
@@ -865,7 +872,7 @@ body{background:#e9e5dc}
 </div>
 
 <nav class="tabs" id="tabs">
-  <a href="#plan">일정</a><a href="#ask">챙길 것</a><a href="#when">누가 언제</a><a href="#flight">비행기</a><a href="#stay">숙소</a><a href="#map">위치</a><a href="#book">예약 현황</a><a href="#apx2">렌터카</a><a href="#apx3">결제 내역</a><a href="#wish">기다리는 것</a><a href="#meal">식당</a>
+  <a href="#plan">일정</a><a href="#checkin">체크인</a><a href="#ask">챙길 것</a><a href="#when">누가 언제</a><a href="#flight">비행기</a><a href="#stay">숙소</a><a href="#map">위치</a><a href="#book">예약 현황</a><a href="#apx2">렌터카</a><a href="#apx3">결제 내역</a><a href="#wish">기다리는 것</a><a href="#meal">식당</a>
 </nav>
 
 <!-- 날짜별 일정 -->
@@ -933,6 +940,31 @@ body{background:#e9e5dc}
       </ol>
     </div>
   </div>
+  <div class="div" aria-hidden="true"></div>
+</section>
+
+<!-- 체크인 · 예약번호 -->
+<section id="checkin">
+  <div class="sec"><span class="no">체크인</span><h2>체크인 · 예약번호</h2></div>
+  <p class="hint">2026. 11. 25. 기준 · 이 묶음만 보고 각자 체크인할 수 있게 모았습니다</p>
+  <div class="note"><b>비행기 체크인 공통</b><span>① 출발 1시간 전 공항 도착 (국내선 일반 기준). ② 미리 하려면 항공사 앱·홈페이지에서 <strong>항공사 예약번호(6자리)</strong>와 탑승자 이름으로 조회 → 일행 선택 → 모바일 탑승권 받기. 이름을 영문으로 물으면 예약 때 넣은 영문 이름(NOL 앱 예약 상세)을 씁니다. ③ 부칠 짐이 있으면 모바일 체크인을 했어도 카운터나 수하물 위탁 창구에 들릅니다. ④ 앱이 어려우면 카운터나 무인 발권기(키오스크)에서 예약번호나 신분증으로 받으면 됩니다. 같은 예약번호로 묶인 일행은 한 사람이 모두 한 번에 체크인할 수 있습니다.</span></div>
+  <div class="note"><b>신분증 · 짐 공통</b><span>어른은 실물 신분증(주민등록증·운전면허증·여권). 만 19세 미만은 생년월일이 적힌 주민등록등본·가족관계증명서·건강보험증·학생증·청소년증도 됩니다 → 박시우·박지우는 등본이나 가족관계증명서, 이연정은 학생증·청소년증·주민등록증. 이수연은 신분증 이름 그대로 '이수연'으로 발권했습니다. 보조배터리는 부치는 짐에 넣지 말고 몸에 지니며, 단자를 테이프로 막거나 한 개씩 봉투에 넣습니다. 대한항공·아시아나·진에어는 기내에서 보조배터리 충전을 할 수 없습니다.</span></div>
+  <h3>비행기 6편</h3>
+<div class="bx"><div class="bxh"><b>✈ 11. 27.(금) 대한항공 KE1579 · 대구 17:15 → 제주 18:25</b><i class="ok">발권 완료</i></div><ul><li><span>탑승자</span><b>이승훈 · 이연정 (어른 2)</b></li><li><span>NOL 예약번호</span><b>D6609585</b></li><li><span>항공사 예약번호</span><b>명단에 없음 · NOL 앱 예약 상세에 있음</b></li><li><span>좌석 · 짐</span><b>할인석 · 위탁 짐 20kg</b></li><li><span>마감</span><b>체크인 카운터 출발 30분 전(16:45) · 탑승 출발 10분 전(17:05)</b></li><li><span>미리 체크인</span><b>대한항공 앱·홈페이지 · 무인 발권기는 출발 18시간 전부터 30분 전까지</b></li><li><span>누가</span><b>이승훈이 둘 다 한 번에</b></li></ul><p class="bxn"><a href="https://www.koreanair.com/contents/plan-your-travel/at-the-airport/boarding-procedure/domestic-flights-boarding?hl=ko">대한항공 국내선 탑승 안내 →</a></p></div>
+<div class="bx"><div class="bxh"><b>✈ 11. 27.(금) 트리니티 TW813 · 대구 20:05 → 제주 21:10</b><i class="ok">발권 완료</i></div><ul><li><span>탑승자</span><b>이미순 · 이수연 · 김태연</b></li><li><span>이승훈</span><b>이 편은 타지 않습니다 (부분 취소 처리 중 · 위 대한항공 편으로 감)</b></li><li><span>NOL 예약번호</span><b>D6550957</b></li><li><span>항공사 예약번호</span><b>TH67V8</b></li><li><span>미리 체크인</span><b>트리니티항공 앱·홈페이지 (옛 티웨이항공) · 부칠 짐이 있으면 공항 카운터</b></li><li><span>마감</span><b>항공사별로 달라 출발 1시간 전 도착 · 늦어도 출발 30분 전 카운터 (일반 기준)</b></li><li><span>누가</span><b>이수연이나 김태연이 세 명 한 번에</b></li></ul><p class="bxn">같은 예약에 이승훈 이름이 함께 있어 조회하면 4명이 보일 수 있습니다. 세 명만 체크인하세요.</p></div>
+<div class="bx"><div class="bxh"><b>✈ 11. 28.(토) 아시아나 OZ8127 · 대구 16:10 → 제주 17:15</b><i class="ok">발권 완료</i></div><ul><li><span>탑승자</span><b>이소은 · 박순랑 · 박시우 · 박지우 (어른 2 · 어린이 2)</b></li><li><span>NOL 예약번호</span><b>D6550981</b></li><li><span>항공사 예약번호</span><b>5LNI6I</b></li><li><span>좌석</span><b>할인석 · 위탁 짐 한도는 아시아나 예약 조회 화면에 나옵니다</b></li><li><span>미리 체크인</span><b>아시아나 앱·홈페이지 · 국내선은 출발 24시간 전부터 30분 전까지 · 예약번호 6자리로 조회</b></li><li><span>마감</span><b>짐 부치기 출발 30분 전(15:40)까지 · 출발 20분 전(15:50)까지 출발장에 들어가야 함</b></li><li><span>누가</span><b>이소은이 네 명 한 번에</b></li></ul><p class="bxn"><a href="https://flyasiana.com/C/KR/KO/contents/online-check-in">아시아나 온라인 체크인 →</a> · 아이 두 명은 등본이나 가족관계증명서를 꼭 챙겨 주세요.</p></div>
+<div class="bx"><div class="bxh"><b>✈ 11. 28.(토) 진에어 LJ7586 · 제주 16:30 → 대구 17:35</b><i class="ok">발권 완료</i></div><ul><li><span>탑승자</span><b>이연정 (어른 1)</b></li><li><span>NOL 예약번호</span><b>D6609571</b></li><li><span>항공사 예약번호</span><b>명단에 없음 · NOL 앱 예약 상세에 있음</b></li><li><span>좌석 · 짐</span><b>할인석 · 위탁 짐 15kg</b></li><li><span>미리 체크인</span><b>진에어 앱·홈페이지</b></li><li><span>마감</span><b>출발 1시간 전(15:30) 공항 도착 · 늦어도 출발 30분 전(16:00) 카운터 (일반 기준)</b></li><li><span>누가</span><b>이연정 본인 · 학생증이나 청소년증 지참</b></li></ul><p class="bxn">28일 오후 제주는 비와 강한 북서풍 예보(11. 25. 05시 기상청 발표)라 출발 전에 진에어 앱이나 문자로 운항 여부를 보세요.</p></div>
+<div class="bx"><div class="bxh"><b>✈ 11. 29.(일) 트리니티 TW814 · 제주 21:55 → 대구</b><i class="ok">발권 완료</i></div><ul><li><span>탑승자</span><b>이미순 · 이수연 · 김태연 · 이승훈</b></li><li><span>NOL 예약번호</span><b>D6551090</b></li><li><span>항공사 예약번호</span><b>DANVAU</b></li><li><span>미리 체크인</span><b>트리니티항공 앱·홈페이지 · 부칠 짐이 있으면 공항 카운터</b></li><li><span>마감</span><b>출발 1시간 전(20:55) 공항 도착 · 늦어도 출발 30분 전(21:25) 카운터 (일반 기준)</b></li><li><span>누가</span><b>이승훈이 네 명 한 번에</b></li></ul><p class="bxn">1호차 반납 20:00 → 셔틀 약 15분 → 공항.</p></div>
+<div class="bx"><div class="bxh"><b>✈ 12. 1.(화) 진에어 LJ7584 · 제주 10:50 → 대구</b><i class="ok">발권 완료</i></div><ul><li><span>탑승자</span><b>이소은 · 박순랑 · 박시우 · 박지우</b></li><li><span>NOL 예약번호</span><b>D6551120</b></li><li><span>항공사 예약번호</span><b>DW593W</b></li><li><span>미리 체크인</span><b>진에어 앱·홈페이지 · 어린이와 함께라 막히면 공항 카운터</b></li><li><span>마감</span><b>출발 1시간 전(09:50) 공항 도착 · 늦어도 출발 30분 전(10:20) 카운터 (일반 기준)</b></li><li><span>누가</span><b>이소은이 네 명 한 번에</b></li></ul><p class="bxn">2호차 반납 09:30 → 셔틀 약 15분 → 공항.</p></div>
+  <h3>숙소 체크인</h3>
+<div class="bx"><div class="bxh"><b>🏠 숙소 1 · 애월 바다 보이는 집 (에어비앤비)</b><i class="ok">예약 확정</i></div><ul><li><span>예약 코드</span><b>HMNKXH3RMB</b></li><li><span>날짜</span><b>11. 27.(금) ~ 11. 29.(일) 2박 · 체크인 16시부터</b></li><li><span>주소</span><b>제주시 애월읍 가문동길4길 43-3, <strong>4동</strong></b></li><li><span>순서</span><b>① 주소로 도착 → ② 4동 찾기 → ③ 출입 방법은 에어비앤비 앱 예약 화면의 체크인 안내를 따릅니다</b></li><li><span>연락</span><b><a href="tel:01024952605">010-2495-2605</a> · 전화는 14~20시만 · 그 밖에는 앱 메시지, 급하면 앱에 "긴급"이라고 남기면 호스트가 전화</b></li><li><span>따로 낼 것</span><b>전기·가스·수도 약 7만 원 (퇴실 때)</b></li></ul><p class="bxn">27일 첫 도착이 밤 9시 넘어서라 전화 시간(14~20시)이 지납니다. 출입 방법은 그 전에 앱에서 받아 두세요. 예약 메일은 앱으로만 옵니다(앱 설치 필수).</p></div>
+<div class="bx"><div class="bxh"><b>🏨 숙소 2 · 신라스테이 플러스 이호테우</b><i class="ok">예약 확정</i></div><ul><li><span>예약번호</span><b>트립비토즈 4046012</b></li><li><span>프런트에서</span><b>"트립비토즈로 예약한 이소은입니다. 예약번호 4046012, 예약자는 이승훈입니다." · 이소은 신분증</b></li><li><span>날짜</span><b>11. 29.(일) ~ 12. 1.(화) 2박 · 체크인 15:00 · 체크아웃 11:00</b></li><li><span>객실</span><b>그랜드 패밀리더블 가든뷰 · 어른 2인 조식</b></li><li><span>주소</span><b>제주시 연대마을길 76</b></li></ul><p class="bxn">무료 취소는 11. 25.까지였습니다.</p></div>
+  <h3>렌터카 받기</h3>
+<div class="bx"><div class="bxh"><b>🚗 1호차 · 뉴대한렌트카 그랜저 GN7</b><i class="ok">결제 완료</i></div><ul><li><span>예약번호</span><b>20261114051409 (제주패스)</b></li><li><span>시간</span><b>11. 27.(금) 19:00 받기 ~ 11. 29.(일) 20:00 반납</b></li><li><span>카운터에서</span><b>"제주패스로 예약한 이승훈입니다. 예약번호 20261114051409." · 이승훈 실물 운전면허증</b></li><li><span>추가 운전자</span><b>김태연 · 실물 운전면허증을 들고 카운터에서 등록 (남은 일)</b></li></ul><p class="bxn">셔틀: 제주공항 1층 5번 게이트 건너편 렌트카종합안내센터 5구역 7번 (30분 간격, 차고지까지 15분) · 업체 <a href="tel:0647127811">064-712-7811</a> · 영업 05:30~23:00</p></div>
+<div class="bx"><div class="bxh"><b>🚗 2호차 · 뉴대한렌트카 그랜저 GN7</b><i class="ok">결제 완료</i></div><ul><li><span>예약번호</span><b>20261114051429 (제주패스)</b></li><li><span>시간</span><b>11. 28.(토) 16:30 받기 ~ 12. 1.(화) 09:30 반납</b></li><li><span>카운터에서</span><b>"제주패스로 예약한 이승훈입니다. 예약번호 20261114051429." · 이승훈 실물 운전면허증</b></li><li><span>추가 운전자</span><b>이소은 · 실물 운전면허증을 들고 차고지 카운터에서 등록 (남은 일) · 29일 밤부터 이소은 운전</b></li></ul><p class="bxn">두 대 모두 완전자차 · 종합보험 면책금 면제 · 셔틀과 차고지는 1호차와 같습니다.</p></div>
+  <h3>진행 상황</h3>
+<div class="bx"><div class="bxh"><b>✔ 끝난 것</b><i class="ok">완료</i></div><ul><li><span>비행기</span><b>6편 모두 발권 (NOL)</b></li><li><span>숙소</span><b>숙소 1 에어비앤비 예약·결제 · 숙소 2 트립비토즈 예약·결제</b></li><li><span>렌터카</span><b>그랜저 2대 제주패스 결제 (11. 14.)</b></li></ul><p class="bxn">결제 합계 3,436,600원 · 자세한 금액은 아래 결제 내역에 있습니다.</p></div>
+<div class="bx"><div class="bxh"><b>… 남은 일</b><i class="wait">남음</i></div><ul><li><span>환불</span><b>이승훈 TW813 부분 취소 환불 약 84,260원 기다림 (NOL)</b></li><li><span>운전자</span><b>김태연(1호차) · 이소은(2호차) 추가 운전자 등록 · 각자 실물 면허증</b></li><li><span>숙소 1</span><b>출입 방법을 에어비앤비 앱에서 미리 받기 · 27일 도착이 전화 시간 뒤</b></li><li><span>서류</span><b>박시우 · 박지우 등본이나 가족관계증명서 · 이연정 학생증이나 청소년증</b></li><li><span>날씨</span><b>28일 오후 제주 비 · 강한 북서풍 예보 · 29일 바다 물결 높음 → 출발 전 항공사 문자·앱 운항 상태 보기</b></li></ul><p class="bxn">바뀌는 일이 생기면 이승훈에게 먼저 알려 주세요.</p></div>
   <div class="div" aria-hidden="true"></div>
 </section>
 
@@ -1015,7 +1047,7 @@ body{background:#e9e5dc}
 <!-- 비행기 -->
 <section id="flight">
   <div class="sec"><span class="no">02</span><h2>비행기</h2></div>
-  <p class="hint">6편 모두 발권 완료 · 예약번호는 가족 톡방 문자 참고</p>
+  <p class="hint">6편 모두 발권 완료 · 예약번호는 위 <a href="#checkin" style="color:var(--sea2);font-weight:700">체크인</a> 묶음에</p>
   <div class="fl bp"><div class="bp-top"><span class="dt">11. 27.(금)</span><span class="bp-al ke">대한항공</span></div><div class="bp-route"><div class="bp-pt"><small aria-hidden="true">TAE</small><b>대구</b><span class="tm num">17:15</span></div><div class="bp-mid" aria-hidden="true"><i class="bp-line"></i><i class="bp-plane"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.5v-2l-8-5V4a1.5 1.5 0 0 0-3 0v4.5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z"/></svg></i></div><div class="bp-pt to"><small aria-hidden="true">CJU</small><b>제주</b><span class="tm num"><span class="sr">→ </span>18:25</span></div></div><i class="bp-cut" aria-hidden="true"></i><div class="ppl">이승훈 · 이연정</div><div class="bk">✔ 발권 완료 · KE1579 · 할인석 · 짐 20kg · 어른 2</div></div>
   <div class="fl bp"><div class="bp-top"><span class="dt">11. 27.(금)</span><span class="bp-al tw">트리니티</span></div><div class="bp-route"><div class="bp-pt"><small aria-hidden="true">TAE</small><b>대구</b><span class="tm num">20:05</span></div><div class="bp-mid" aria-hidden="true"><i class="bp-line"></i><i class="bp-plane"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.5v-2l-8-5V4a1.5 1.5 0 0 0-3 0v4.5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z"/></svg></i></div><div class="bp-pt to"><small aria-hidden="true">CJU</small><b>제주</b><span class="tm num"><span class="sr">→ </span>21:10</span></div></div><i class="bp-cut" aria-hidden="true"></i><div class="ppl">이미순 · 이수연 · 김태연</div><div class="bk">✔ 발권 완료 · TW813 · 할인석 · 짐 15kg · 이승훈 1명 부분 취소 접수</div></div>
   <div class="fl bp"><div class="bp-top"><span class="dt">11. 28.(토)</span><span class="bp-al oz">아시아나</span></div><div class="bp-route"><div class="bp-pt"><small aria-hidden="true">TAE</small><b>대구</b><span class="tm num">16:10</span></div><div class="bp-mid" aria-hidden="true"><i class="bp-line"></i><i class="bp-plane"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.5v-2l-8-5V4a1.5 1.5 0 0 0-3 0v4.5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z"/></svg></i></div><div class="bp-pt to"><small aria-hidden="true">CJU</small><b>제주</b><span class="tm num"><span class="sr">→ </span>17:15</span></div></div><i class="bp-cut" aria-hidden="true"></i><div class="ppl">이소은 · 박순랑 · 시우 · 지우</div><div class="bk">✔ 발권 완료 · OZ8127 · 할인석 · 짐 20kg · 어른 2 · 소아 2</div></div>
@@ -1130,7 +1162,7 @@ body{background:#e9e5dc}
 <!-- 부록 1 -->
 <section id="book">
   <div class="sec"><span class="no">부록 1</span><h2>예약 현황</h2></div>
-  <p class="hint">2026. 11. 14. 기준 · 예약번호는 가족 톡방 문자 참고</p>
+  <p class="hint">2026. 11. 14. 기준 · 예약번호는 위 <a href="#checkin" style="color:var(--sea2);font-weight:700">체크인</a> 묶음에</p>
   <div class="bx"><div class="bxh"><b>✈ 비행기 6편</b><i class="ok">발권 완료</i></div><ul><li><span>27일(금)</span><b>대구 → 제주 · 대한항공 KE1579 17:15 · 이승훈 · 이연정 · 짐 20kg</b></li><li><span>27일(금)</span><b>대구 → 제주 · 트리니티 TW813 20:05 · 이미순 · 이수연 · 김태연 · 짐 15kg (이승훈 1명 부분 취소 접수)</b></li><li><span>28일(토)</span><b>대구 → 제주 · 아시아나 OZ8127 16:10 · 이소은 · 박순랑 · 시우 · 지우 · 짐 20kg</b></li><li><span>28일(토)</span><b>제주 → 대구 · 진에어 LJ7586 16:30 · 이연정 · 짐 15kg</b></li><li><span>29일(일)</span><b>제주 → 대구 · 트리니티 TW814 21:55 · 이미순 · 이수연 · 김태연 · 이승훈 · 짐 20kg</b></li><li><span>1일(화)</span><b>제주 → 대구 · 진에어 LJ7584 10:50 · 이소은 · 박순랑 · 시우 · 지우 · 짐 15kg</b></li></ul><p class="bxn">비행기 공통: 이름·날짜·시간을 바꾸려면 취소 후 다시 사야 하고, 발권 대행 수수료는 결제 당일에만 환불됩니다. 바꿀 일이 생기면 이승훈에게 먼저 알려 주세요.</p></div>
   <div class="bx"><div class="bxh"><b>🏠 숙소 1 · 11. 27.~29. 애월 바다 보이는 집</b><i class="ok">완료</i></div><ul><li><span>숙소</span><b>에어비앤비 · 오션뷰 3층 단독주택 한 채 (방 4 · 퀸 침대 4 · 욕실 3)</b></li><li><span>주소</span><b>제주시 애월읍 가문동길4길 43-3, 4동</b></li><li><span>체크인 · 아웃</span><b>27일(금) 오후 4시 이후 · 29일(일) 오전 11시 전</b></li><li><span>인원</span><b>27일 밤 5명 (이연정 포함) · 28일 밤 8명 (이연정은 28일 낮 비행기로 귀가)</b></li><li><span>따로 내는 것</span><b>전기·가스·수도 쓴 만큼 · 2박 약 7만 원 (11월 하루 한 층 약 12,000원 × 3개 층 · 6만~11만 원 사이)</b></li></ul><p class="bxn">호스트 안내: 생수 없음(직접 준비) · 휴지는 기본량 · 바베큐 후에는 깨끗이 정리.</p></div>
   <div class="bx"><div class="bxh"><b>🏨 숙소 2 · 11. 29.~12. 1. 신라스테이 플러스 이호테우</b><i class="ok">완료</i></div><ul><li><span>객실</span><b>그랜드 패밀리더블 가든뷰 · 45㎡ · 더블 침대 2</b></li><li><span>투숙객</span><b>이소은 · 박순랑 · 시우 · 지우</b></li><li><span>예약자</span><b>이승훈 · 체크인은 이소은 이름으로</b></li><li><span>체크인 · 아웃</span><b>29일(일) 오후 3시 이후 · 1일(화) 오전 11시 전 (9시쯤 나갈 예정)</b></li><li><span>조식</span><b>어른 2명 포함 · 07:00~10:00 1층 카페 · 아이 1인 20,000원 현장 결제</b></li><li><span>주소</span><b>제주시 연대마을길 76 · 무료 주차</b></li></ul><p class="bxn">최대 4명 · 침구 추가 불가 · 야외 온수 수영장 09:00~22:00 무료</p></div>
@@ -1242,6 +1274,7 @@ body{background:#e9e5dc}
 <button class="top" id="toTop" aria-label="맨 위로">↑</button>
 <nav class="dock" id="dock" aria-label="빠른 메뉴">
   <a href="#plan"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>일정</span></a>
+  <a href="#checkin"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5h16v3a2 2 0 0 0 0 4v3H4v-3a2 2 0 0 0 0-4z"/><path d="M14 7.5v10" stroke-dasharray="2 2"/></svg><span>체크인</span></a>
   <a href="#flight"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15.5v-2l-8-5V4a1.5 1.5 0 0 0-3 0v4.5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z"/></svg><span>비행기</span></a>
   <a href="#stay"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.5 12 5l8 6.5V20H4z"/><path d="M10 20v-5h4v5"/></svg><span>숙소</span></a>
   <a href="#map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg><span>지도</span></a>
